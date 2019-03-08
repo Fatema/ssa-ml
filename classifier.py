@@ -93,8 +93,8 @@ while (epoch<100):
         loss.backward()
         optimiser.step()
 
-        train_loss_arr = np.append(train_loss_arr, loss.data)
-        train_acc_arr = np.append(train_acc_arr, pred.data.eq(t.view_as(pred)).float().mean().item())
+        train_loss_arr = np.append(train_loss_arr, loss.data.numpy())
+        train_acc_arr = np.append(train_acc_arr, pred.data.eq(t.view_as(pred)).float().mean().item().numpy())
 
     # iterate entire test dataset
     for x,t in test_loader:
@@ -104,8 +104,8 @@ while (epoch<100):
         loss = torch.nn.functional.cross_entropy(p, t)
         pred = p.argmax(dim=1, keepdim=True)
 
-        test_loss_arr = np.append(test_loss_arr, loss.data)
-        test_acc_arr = np.append(test_acc_arr, pred.data.eq(t.view_as(pred)).float().mean().item())
+        test_loss_arr = np.append(test_loss_arr, loss.data.numpy())
+        test_acc_arr = np.append(test_acc_arr, pred.data.eq(t.view_as(pred)).float().mean().item().numpy())
 
     # plot metrics
     vis.line(X=np.array([epoch]), Y=np.array([[
