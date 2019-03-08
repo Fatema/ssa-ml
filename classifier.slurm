@@ -13,4 +13,5 @@ module load cuda/9.0
 
 source ~/.venv/pt/bin/activate
 
+visdom -p 12345 &
 python3 land_classifier.py
