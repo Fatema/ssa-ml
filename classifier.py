@@ -8,7 +8,7 @@ import torchvision
 
 # local version imports
 import visdom
-vis = visdom.Visdom(port=12345)
+vis = visdom.Visdom(server='ncc1.clients.dur.ac.uk',port=12345)
 vis.line(X=np.array([0]), Y=np.array([[np.nan, np.nan]]), win='loss')
 vis.line(X=np.array([0]), Y=np.array([[np.nan, np.nan]]), win='acc')
 
