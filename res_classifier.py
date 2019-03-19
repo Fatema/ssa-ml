@@ -4,7 +4,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-import torchvision
+from torchvision import transforms, datasets
 
 # local version imports
 import visdom
@@ -30,7 +30,7 @@ scale = 32
 mean = (0.5,0.5,0.5)
 std = (0.5,0.5,0.5)
 
-training_transforms = torchvision.transforms.Compose([
+training_transforms = transforms.Compose([
     transforms.RandomRotation(rotation_degrees),
     transforms.RandomResizedCrop(input_shape),
     transforms.RandomHorizontalFlip(),
@@ -39,18 +39,18 @@ training_transforms = torchvision.transforms.Compose([
     transforms.Normalize(mean, std)
 ])
 
-testing_transforms = torchvision.transforms.Compose([
+testing_transforms = transforms.Compose([
     transforms.Resize(scale),
     transforms.ToTensor(),
     transforms.Normalize(mean, std)
 ])
 
 train_loader = torch.utils.data.DataLoader(
-    torchvision.datasets.CIFAR100('data', train=True, download=True, transform=training_transforms),
+    datasets.CIFAR100('data', train=True, download=True, transform=training_transforms),
     shuffle=True, batch_size=64, drop_last=True)
 
 test_loader = torch.utils.data.DataLoader(
-    torchvision.datasets.CIFAR100('data', train=False, download=True, transform=testing_transforms),
+    datasets.CIFAR100('data', train=False, download=True, transform=testing_transforms),
     shuffle=False, batch_size=64, drop_last=True)
 
 train_iterator = iter(cycle(train_loader))
