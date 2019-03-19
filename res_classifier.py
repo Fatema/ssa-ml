@@ -9,8 +9,8 @@ from torchvision import transforms, datasets
 # local version imports
 import visdom
 vis = visdom.Visdom(server='ncc1.clients.dur.ac.uk',port=12345)
-vis.line(X=np.array([0]), Y=np.array([[np.nan, np.nan]]), win='loss')
-vis.line(X=np.array([0]), Y=np.array([[np.nan, np.nan]]), win='acc')
+vis.line(X=np.array([0]), Y=np.array([[np.nan, np.nan]]), win='res_loss')
+vis.line(X=np.array([0]), Y=np.array([[np.nan, np.nan]]), win='res_acc')
 
 device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
 
@@ -145,7 +145,7 @@ while (epoch < 100):
     vis.line(X=np.array([epoch]), Y=np.array([[
         train_loss_arr.mean(),
         test_loss_arr.mean()
-    ]]), win='loss', opts=dict(title='loss',xlabel='epoch', ylabel='loss', ytype='log', legend=[
+    ]]), win='res_loss', opts=dict(title='loss',xlabel='epoch', ylabel='loss', ytype='log', legend=[
         'train loss',
         'test loss'
     ]), update='append')
@@ -153,7 +153,7 @@ while (epoch < 100):
     vis.line(X=np.array([epoch]), Y=np.array([[
         train_acc_arr.mean(),
         test_acc_arr.mean()
-    ]]), win='acc', opts=dict(title='acc',xlabel='epoch', ylabel='loss', ytype='log', legend=[
+    ]]), win='res_acc', opts=dict(title='acc',xlabel='epoch', ylabel='loss', ytype='log', legend=[
         'train accuracy',
         'test accuracy'
     ]), update='append')
