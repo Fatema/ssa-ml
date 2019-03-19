@@ -13,4 +13,4 @@ module load cuda/9.0
 
 source ~/.venv/pt/bin/activate
 
-python3 land_classifier.py
+python3 classifier.py

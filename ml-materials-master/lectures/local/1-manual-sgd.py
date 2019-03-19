@@ -20,23 +20,24 @@ def cycle(iterable):
         for x in iterable:
             yield x
 
-class_names = ['barren_land', 'building', 'grassland', 'road', 'trees', 'water']
+class_names = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat', 'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
+# class_names = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine']
 
 train_loader = torch.utils.data.DataLoader(
-    torchvision.datasets.ImageFolder('images', transform=torchvision.transforms.Compose([
+    torchvision.datasets.FashionMNIST('data', train=True, download=True, transform=torchvision.transforms.Compose([
         torchvision.transforms.Resize(32),
         torchvision.transforms.ToTensor(),
-        torchvision.transforms.Normalize((0.5,0.5,0.5), (0.5,0.5,0.5))
+        torchvision.transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
     ])),
 shuffle=True, batch_size=64, drop_last=True)
 
 test_loader = torch.utils.data.DataLoader(
-    torchvision.datasets.ImageFolder('images', transform=torchvision.transforms.Compose([
+    torchvision.datasets.FashionMNIST('data', train=False, download=True, transform=torchvision.transforms.Compose([
         torchvision.transforms.Resize(32),
         torchvision.transforms.ToTensor(),
-        torchvision.transforms.Normalize((0.5,0.5,0.5), (0.5,0.5,0.5))
+        torchvision.transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
     ])),
-shuffle=False, batch_size=64, drop_last=True)
+batch_size=64, drop_last=True)
 
 train_iterator = iter(cycle(train_loader))
 test_iterator = iter(cycle(test_loader))
@@ -44,36 +45,25 @@ test_iterator = iter(cycle(test_loader))
 print(f'> Size of training dataset {len(train_loader.dataset)}')
 print(f'> Size of test dataset {len(test_loader.dataset)}')
 
-# define the model
-class ConvolutionalNetwork(nn.Module):
+class SimpleNetwork(nn.Module):
     def __init__(self):
-        super(ConvolutionalNetwork, self).__init__()
-        layers = nn.ModuleList()
-        layers.append(nn.Conv2d(3, 64, kernel_size=4, stride=2, padding=1, bias=False))
-        layers.append(nn.BatchNorm2d(64))
-        layers.append(nn.ReLU())
-        layers.append(nn.Conv2d(64, 128, kernel_size=4, stride=2, padding=1, bias=False))
-        layers.append(nn.BatchNorm2d(128))
-        layers.append(nn.ReLU())
-        layers.append(nn.Conv2d(128, 6, kernel_size=4, stride=2, padding=1, bias=False))
-        layers.append(nn.AvgPool2d((4,4)))
-        self.layers = layers
+        super(SimpleNetwork, self).__init__()
+        self.l1 = nn.Linear(in_features=1024, out_features=512)
+        self.l2 = nn.Linear(in_features=512, out_features=10)
 
     def forward(self, x):
-        for m in self.layers:
-            x = m(x)
+        x = self.l1(x)
+        x = torch.nn.functional.relu(x)
+        x = self.l2(x)
         return x
 
-N = ConvolutionalNetwork().to(device)
-
-print(f'> Number of network parameters {len(torch.nn.utils.parameters_to_vector(N.parameters()))}')
+N = SimpleNetwork().to(device)
 
 # initialise the optimiser
-optimiser = torch.optim.Adam(N.parameters(), lr=0.0001)
 epoch = 0
 
 # train
-while (epoch < 100):
+while (epoch<100):
     
     # arrays for metrics
     train_loss_arr = np.zeros(0)
@@ -86,12 +76,17 @@ while (epoch < 100):
         x,t = next(train_iterator)
         x,t = x.to(device), t.to(device)
 
-        optimiser.zero_grad()
-        p = N(x).view(x.size(0), len(class_names))
+        for p in N.parameters():
+            if p.grad is not None:
+                p.grad.data.zero_()
+
+        p = N(x.view(x.size(0), -1))
         pred = p.argmax(dim=1, keepdim=True)
         loss = torch.nn.functional.cross_entropy(p, t)
         loss.backward()
-        optimiser.step()
+        
+        for p in N.parameters():
+            p.data = p.data-0.01*p.grad.data
 
         train_loss_arr = np.append(train_loss_arr, loss.data)
         train_acc_arr = np.append(train_acc_arr, pred.data.eq(t.view_as(pred)).float().mean().item())
@@ -100,7 +95,7 @@ while (epoch < 100):
     for x,t in test_loader:
         x,t = x.to(device), t.to(device)
 
-        p = N(x).view(x.size(0), len(class_names))
+        p = N(x.view(x.size(0), -1))
         loss = torch.nn.functional.cross_entropy(p, t)
         pred = p.argmax(dim=1, keepdim=True)
 
@@ -124,4 +119,4 @@ while (epoch < 100):
         'test accuracy'
     ]), update='append')
 
-    epoch += 1
+    epoch = epoch+1

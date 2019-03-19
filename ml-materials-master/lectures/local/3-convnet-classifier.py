@@ -8,7 +8,7 @@ import torchvision
 
 # local version imports
 import visdom
-vis = visdom.Visdom(server='ncc1.clients.dur.ac.uk',port=12345)
+vis = visdom.Visdom(port=12345)
 vis.line(X=np.array([0]), Y=np.array([[np.nan, np.nan]]), win='loss')
 vis.line(X=np.array([0]), Y=np.array([[np.nan, np.nan]]), win='acc')
 
@@ -22,36 +22,21 @@ def cycle(iterable):
 
 class_names = ['apple','aquarium_fish','baby','bear','beaver','bed','bee','beetle','bicycle','bottle','bowl','boy','bridge','bus','butterfly','camel','can','castle','caterpillar','cattle','chair','chimpanzee','clock','cloud','cockroach','couch','crab','crocodile','cup','dinosaur','dolphin','elephant','flatfish','forest','fox','girl','hamster','house','kangaroo','computer_keyboard','lamp','lawn_mower','leopard','lion','lizard','lobster','man','maple_tree','motorcycle','mountain','mouse','mushroom','oak_tree','orange','orchid','otter','palm_tree','pear','pickup_truck','pine_tree','plain','plate','poppy','porcupine','possum','rabbit','raccoon','ray','road','rocket','rose','sea','seal','shark','shrew','skunk','skyscraper','snail','snake','spider','squirrel','streetcar','sunflower','sweet_pepper','table','tank','telephone','television','tiger','tractor','train','trout','tulip','turtle','wardrobe','whale','willow_tree','wolf','woman','worm',]
 
-
-#transforms 
-input_shape = 100
-rotation_degrees = 30
-scale = 32
-mean = (0.5,0.5,0.5)
-std = (0.5,0.5,0.5)
-
-training_transforms = transforms.Compose([
-    transforms.RandomRotation(rotation_degrees),
-    transforms.RandomResizedCrop(input_shape),
-    transforms.RandomHorizontalFlip(),
-    transforms.Resize(scale),
-    transforms.ToTensor(),
-    transforms.Normalize(mean, std)
-])
-
-testing_transforms = transforms.Compose([
-    transforms.Resize(scale),
-    transforms.ToTensor(),
-    transforms.Normalize(mean, std)
-])
-
 train_loader = torch.utils.data.DataLoader(
-    torchvision.datasets.CIFAR100('data', train=True, download=True, transform=training_transforms),
-    shuffle=True, batch_size=64, drop_last=True)
+    torchvision.datasets.CIFAR100('data', train=True, download=True, transform=torchvision.transforms.Compose([
+        torchvision.transforms.Resize(32),
+        torchvision.transforms.ToTensor(),
+        torchvision.transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
+    ])),
+shuffle=True, batch_size=64, drop_last=True)
 
 test_loader = torch.utils.data.DataLoader(
-    torchvision.datasets.CIFAR100('data', train=False, download=True, transform=testing_transforms),
-    shuffle=False, batch_size=64, drop_last=True)
+    torchvision.datasets.CIFAR100('data', train=False, download=True, transform=torchvision.transforms.Compose([
+        torchvision.transforms.Resize(32),
+        torchvision.transforms.ToTensor(),
+        torchvision.transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
+    ])),
+batch_size=64, drop_last=True)
 
 train_iterator = iter(cycle(train_loader))
 test_iterator = iter(cycle(test_loader))
@@ -59,7 +44,7 @@ test_iterator = iter(cycle(test_loader))
 print(f'> Size of training dataset {len(train_loader.dataset)}')
 print(f'> Size of test dataset {len(test_loader.dataset)}')
 
-# Basic CNN model
+# define the model
 class ConvolutionalNetwork(nn.Module):
     def __init__(self):
         super(ConvolutionalNetwork, self).__init__()
@@ -88,7 +73,7 @@ optimiser = torch.optim.Adam(N.parameters(), lr=0.0001)
 epoch = 0
 
 # train
-while (epoch < 100):
+while (epoch<100):
     
     # arrays for metrics
     train_loss_arr = np.zeros(0)
@@ -108,7 +93,7 @@ while (epoch < 100):
         loss.backward()
         optimiser.step()
 
-        train_loss_arr = np.append(train_loss_arr, loss.data.cpu().numpy() )
+        train_loss_arr = np.append(train_loss_arr, loss.data)
         train_acc_arr = np.append(train_acc_arr, pred.data.eq(t.view_as(pred)).float().mean().item())
 
     # iterate entire test dataset
@@ -119,7 +104,7 @@ while (epoch < 100):
         loss = torch.nn.functional.cross_entropy(p, t)
         pred = p.argmax(dim=1, keepdim=True)
 
-        test_loss_arr = np.append(test_loss_arr, loss.data.cpu().numpy() )
+        test_loss_arr = np.append(test_loss_arr, loss.data)
         test_acc_arr = np.append(test_acc_arr, pred.data.eq(t.view_as(pred)).float().mean().item())
 
     # plot metrics
@@ -139,4 +124,4 @@ while (epoch < 100):
         'test accuracy'
     ]), update='append')
 
-    epoch = epoch + 1
+    epoch = epoch+1

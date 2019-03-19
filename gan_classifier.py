@@ -59,57 +59,91 @@ test_iterator = iter(cycle(test_loader))
 print(f'> Size of training dataset {len(train_loader.dataset)}')
 print(f'> Size of test dataset {len(test_loader.dataset)}')
 
-# Basic CNN model
-class ConvolutionalNetwork(nn.Module):
-    def __init__(self):
-        super(ConvolutionalNetwork, self).__init__()
-        layers = nn.ModuleList()
-        layers.append(nn.Conv2d(3, 64, kernel_size=4, stride=2, padding=1, bias=False))
-        layers.append(nn.BatchNorm2d(64))
-        layers.append(nn.ReLU())
-        layers.append(nn.Conv2d(64, 128, kernel_size=4, stride=2, padding=1, bias=False))
-        layers.append(nn.BatchNorm2d(128))
-        layers.append(nn.ReLU())
-        layers.append(nn.Conv2d(128, 100, kernel_size=4, stride=2, padding=1, bias=False))
-        layers.append(nn.AvgPool2d((4,4)))
-        self.layers = layers
+# define two models: (1) Generator, (2) Discriminator
+class Generator(nn.Module):
+    def __init__(self, f=64):
+        super(Generator, self).__init__()
+        self.generate = nn.Sequential(
+            nn.ConvTranspose2d(100, f*8, 4, 2, 1, bias=False),
+            nn.BatchNorm2d(64*8),
+            nn.ReLU(True),
+            nn.ConvTranspose2d(f*8, f*4, 4, 2, 1, bias=False),
+            nn.BatchNorm2d(f*4),
+            nn.ReLU(True),
+            nn.ConvTranspose2d(f*4, f*2, 4, 2, 1, bias=False),
+            nn.BatchNorm2d(f*2),
+            nn.ReLU(True),
+            nn.ConvTranspose2d(f*2, f, 4, 2, 1, bias=False),
+            nn.BatchNorm2d(f),
+            nn.ReLU(True),
+            nn.ConvTranspose2d(f, 3, 4, 2, 1, bias=False),
+            nn.Sigmoid()
+        )
 
-    def forward(self, x):
-        for m in self.layers:
-            x = m(x)
-        return x
+class Discriminator(nn.Module):
+    def __init__(self, f=64):
+        super(Discriminator, self).__init__()
+        self.discriminate = nn.Sequential(
+            nn.Conv2d(3, f, 4, 2, 1, bias=False),
+            nn.LeakyReLU(0.2, inplace=True),
+            nn.Conv2d(f, f*2, 4, 2, 1, bias=False),
+            nn.BatchNorm2d(f*2),
+            nn.LeakyReLU(0.2, inplace=True),
+            nn.Conv2d(f*2, f*4, 4, 2, 1, bias=False),
+            nn.BatchNorm2d(f*4),
+            nn.LeakyReLU(0.2, inplace=True),
+            nn.Conv2d(f*4, f*8, 4, 2, 1, bias=False),
+            nn.BatchNorm2d(f*8),
+            nn.LeakyReLU(0.2, inplace=True),
+            nn.Conv2d(f*8, 1, 4, 2, 1, bias=False),
+            nn.Sigmoid()
+        )
+        
+G = Generator().to(device)
+D = Discriminator().to(device)
 
-N = ConvolutionalNetwork().to(device)
-
-print(f'> Number of network parameters {len(torch.nn.utils.parameters_to_vector(N.parameters()))}')
+print(f'> Number of generator parameters {len(torch.nn.utils.parameters_to_vector(G.parameters()))}')
+print(f'> Number of discriminator parameters {len(torch.nn.utils.parameters_to_vector(D.parameters()))}')
 
 # initialise the optimiser
-optimiser = torch.optim.Adam(N.parameters(), lr=0.0001)
+optimiser_G = torch.optim.Adam(G.parameters(), lr=0.001)
+optimiser_D = torch.optim.Adam(D.parameters(), lr=0.001)
+
+bce_loss = nn.BCELoss()
 epoch = 0
 
-# train
+# main training loop
+# training loop
 while (epoch < 100):
     
     # arrays for metrics
-    train_loss_arr = np.zeros(0)
-    train_acc_arr = np.zeros(0)
-    test_loss_arr = np.zeros(0)
-    test_acc_arr = np.zeros(0)
+    logs = {}
+    gen_loss_arr = np.zeros(0)
+    dis_loss_arr = np.zeros(0)
 
-    # iterate over some of train dateset
+    # iterate over some of the train dateset
     for i in range(1000):
         x,t = next(train_iterator)
         x,t = x.to(device), t.to(device)
 
-        optimiser.zero_grad()
-        p = N(x).view(x.size(0), len(class_names))
-        pred = p.argmax(dim=1, keepdim=True)
-        loss = torch.nn.functional.cross_entropy(p, t)
-        loss.backward()
-        optimiser.step()
+        # train discriminator 
+        optimiser_D.zero_grad()
+        g = G.generate(torch.randn(x.size(0), 100, 1, 1).to(device))
+        l_r = bce_loss(D.discriminate(x).mean(), torch.ones(1)[0].to(device)) # real -> 1
+        l_f = bce_loss(D.discriminate(g.detach()).mean(), torch.zeros(1)[0].to(device)) #  fake -> 0
+        loss_d = (l_r + l_f)/2.0
+        loss_d.backward()
+        optimiser_D.step()
+        
+        # train generator
+        optimiser_G.zero_grad()
+        g = G.generate(torch.randn(x.size(0), 100, 1, 1).to(device))
+        loss_g = bce_loss(D.discriminate(g).mean(), torch.ones(1)[0].to(device)) # fake -> 1
+        loss_g.backward()
+        optimiser_G.step()
 
-        train_loss_arr = np.append(train_loss_arr, loss.data.cpu().numpy() )
-        train_acc_arr = np.append(train_acc_arr, pred.data.eq(t.view_as(pred)).float().mean().item())
+        gen_loss_arr = np.append(gen_loss_arr, loss_g.cpu().data)
+        dis_loss_arr = np.append(dis_loss_arr, loss_d.cpu().data)
 
     # iterate entire test dataset
     for x,t in test_loader:
@@ -139,4 +173,4 @@ while (epoch < 100):
         'test accuracy'
     ]), update='append')
 
-    epoch = epoch + 1
+    epoch = epoch+1
