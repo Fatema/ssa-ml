@@ -30,7 +30,7 @@ scale = 32
 mean = (0.5,0.5,0.5)
 std = (0.5,0.5,0.5)
 
-training_transforms = transforms.Compose([
+training_transforms = torchvision.transforms.Compose([
     transforms.RandomRotation(rotation_degrees),
     transforms.RandomResizedCrop(input_shape),
     transforms.RandomHorizontalFlip(),
@@ -39,7 +39,7 @@ training_transforms = transforms.Compose([
     transforms.Normalize(mean, std)
 ])
 
-testing_transforms = transforms.Compose([
+testing_transforms = torchvision.transforms.Compose([
     transforms.Resize(scale),
     transforms.ToTensor(),
     transforms.Normalize(mean, std)
