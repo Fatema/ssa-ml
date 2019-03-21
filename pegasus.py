@@ -142,4 +142,4 @@ example_2_code = N.encode(example_2.unsqueeze(0))
 bad_pegasus = N.decode(0.9*example_1_code + 0.1*example_2_code).squeeze(0)
 
 plt.grid(False)
-viz.matplot(plt.imshow(bad_pegasus.cpu().data.permute(0,2,1).contiguous().permute(2,1,0), cmap=plt.cm.binary))
+vis.matplot(plt.imshow(bad_pegasus.cpu().data.permute(0,2,1).contiguous().permute(2,1,0), cmap=plt.cm.binary))
