@@ -142,10 +142,10 @@ example_2_code = N.encode(example_2.unsqueeze(0))
 # this is some sad blurry excuse of a Pegasus, hopefully you can make a better one
 bad_pegasus = N.decode(0.9*example_1_code + 0.1*example_2_code).squeeze(0)
 
-plt.grid(False)
-plt.imshow(bad_pegasus.cpu().data.permute(0,2,1).contiguous().permute(2,1,0))
+pegasus = bad_pegasus.cpu().data.permute(0,2,1).contiguous().permute(2,1,0)
 
-vis._send({
-       data:plt.data,
-       layout:plt.layout,
-})
+vis.image(
+        pegasus,
+        opts=dict(title='Random!', caption='How random.'),
+    )
+
