@@ -101,7 +101,7 @@ try:
     N.load_state_dict(torch.load(MODEL_PATH))
     N.eval()
 except:
-    continue
+    print('no model found')
 
 print(f'> Number of network parameters {len(torch.nn.utils.parameters_to_vector(N.parameters()))}')
 
