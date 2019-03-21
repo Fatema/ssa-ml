@@ -152,7 +152,7 @@ while (epoch < 100):
         loss.backward()
         optimiser.step()
 
-        train_loss_arr = np.append(train_loss_arr, loss.data.cpu().numpy())
+        train_loss_arr = np.append(train_loss_arr, loss.cpu().data)
 
     # plot metrics
     vis.line(X=np.array([epoch]), Y=np.array([[
