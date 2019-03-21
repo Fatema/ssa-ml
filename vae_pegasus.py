@@ -1,5 +1,5 @@
 # main imports
-import math
+import math, copy
 import numpy as np
 import torch
 import torch.nn as nn
@@ -118,6 +118,11 @@ class VAE(nn.Module):
 
 
 N = VAE().to(device)
+try:
+    N.load_state_dict(torch.load(MODEL_PATH))
+    N.eval()
+except:
+    print('no model found')
 
 optimiser = torch.optim.Adam(N.parameters(), lr=0.001)
 
@@ -174,6 +179,8 @@ while (epoch < 100):
     vis.image(
         pegasus.numpy().T
     )
+
+    torch.save(copy.deepcopy(N.state_dict()), 'vae_pegasus_model.pkl')
 
     # plot metrics
     vis.line(X=np.array([epoch]), Y=np.array([[
