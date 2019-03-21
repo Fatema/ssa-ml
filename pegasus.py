@@ -146,8 +146,13 @@ pegasus = bad_pegasus.cpu().data.permute(0,2,1).contiguous().permute(2,1,0)
 
 print(pegasus.numpy().shape)
 
+.image(
+        np.random.rand(3, 512, 256),
+        opts=dict(title='Random!', caption='How random.'),
+    )
+
 vis.image(
-        pegasus.numpy(),
+        pegasus.numpy().T,
         opts=dict(title='Random!', caption='How random.'),
     )
 
