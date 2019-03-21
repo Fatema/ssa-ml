@@ -157,8 +157,8 @@ while (epoch < 100):
     # plot metrics
     vis.line(X=np.array([epoch]), Y=np.array([[
         train_loss_arr.mean()
-    ]]), win='loss', opts=dict(title='loss',xlabel='epoch', ylabel='loss', ytype='log', legend=[
-        'train loss',
+    ]]), win='loss', opts=dict(title='loss', xlabel='epoch', ylabel='loss', ytype='log', legend=[
+        'train loss'
     ]), update='append')
 
     epoch = epoch + 1
