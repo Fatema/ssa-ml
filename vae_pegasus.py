@@ -4,13 +4,12 @@ import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-import torchvision
+from torchvision import transforms, datasets
 
 # local version imports
 import visdom
 vis = visdom.Visdom(server='ncc1.clients.dur.ac.uk',port=12345)
 vis.line(X=np.array([0]), Y=np.array([[np.nan, np.nan]]), win='loss')
-vis.line(X=np.array([0]), Y=np.array([[np.nan, np.nan]]), win='acc')
 
 device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
 
@@ -20,7 +19,7 @@ def cycle(iterable):
         for x in iterable:
             yield x
 
-class_names = ['apple','aquarium_fish','baby','bear','beaver','bed','bee','beetle','bicycle','bottle','bowl','boy','bridge','bus','butterfly','camel','can','castle','caterpillar','cattle','chair','chimpanzee','clock','cloud','cockroach','couch','crab','crocodile','cup','dinosaur','dolphin','elephant','flatfish','forest','fox','girl','hamster','house','kangaroo','computer_keyboard','lamp','lawn_mower','leopard','lion','lizard','lobster','man','maple_tree','motorcycle','mountain','mouse','mushroom','oak_tree','orange','orchid','otter','palm_tree','pear','pickup_truck','pine_tree','plain','plate','poppy','porcupine','possum','rabbit','raccoon','ray','road','rocket','rose','sea','seal','shark','shrew','skunk','skyscraper','snail','snake','spider','squirrel','streetcar','sunflower','sweet_pepper','table','tank','telephone','television','tiger','tractor','train','trout','tulip','turtle','wardrobe','whale','willow_tree','wolf','woman','worm',]
+class_names = ['airplane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']
 
 
 #transforms 
@@ -31,9 +30,9 @@ mean = (0.5,0.5,0.5)
 std = (0.5,0.5,0.5)
 
 training_transforms = transforms.Compose([
-    transforms.RandomRotation(rotation_degrees),
-    transforms.RandomResizedCrop(input_shape),
-    transforms.RandomHorizontalFlip(),
+    # transforms.RandomRotation(rotation_degrees),
+    # transforms.RandomResizedCrop(input_shape),
+    # transforms.RandomHorizontalFlip(),
     transforms.Resize(scale),
     transforms.ToTensor(),
     transforms.Normalize(mean, std)
@@ -46,11 +45,11 @@ testing_transforms = transforms.Compose([
 ])
 
 train_loader = torch.utils.data.DataLoader(
-    torchvision.datasets.CIFAR100('data', train=True, download=True, transform=training_transforms),
+    torchvision.datasets.CIFAR10('data', train=True, download=True, transform=training_transforms),
     shuffle=True, batch_size=64, drop_last=True)
 
 test_loader = torch.utils.data.DataLoader(
-    torchvision.datasets.CIFAR100('data', train=False, download=True, transform=testing_transforms),
+    torchvision.datasets.CIFAR10('data', train=False, download=True, transform=testing_transforms),
     shuffle=False, batch_size=64, drop_last=True)
 
 train_iterator = iter(cycle(train_loader))
