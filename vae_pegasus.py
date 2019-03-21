@@ -45,11 +45,11 @@ testing_transforms = transforms.Compose([
 ])
 
 train_loader = torch.utils.data.DataLoader(
-    torchvision.datasets.CIFAR10('data', train=True, download=True, transform=training_transforms),
+    datasets.CIFAR10('data', train=True, download=True, transform=training_transforms),
     shuffle=True, batch_size=64, drop_last=True)
 
 test_loader = torch.utils.data.DataLoader(
-    torchvision.datasets.CIFAR10('data', train=False, download=True, transform=testing_transforms),
+    datasets.CIFAR10('data', train=False, download=True, transform=testing_transforms),
     shuffle=False, batch_size=64, drop_last=True)
 
 train_iterator = iter(cycle(train_loader))
@@ -152,8 +152,8 @@ while (epoch < 100):
     epoch = epoch + 1
 
 
-example_1 = torchvision.transforms.ToTensor()(test_loader.dataset.test_data[13]).to(device)  # horse
-example_2 = torchvision.transforms.ToTensor()(test_loader.dataset.test_data[160]).to(device) # bird
+example_1 = transforms.ToTensor()(test_loader.dataset.test_data[13]).to(device)  # horse
+example_2 = transforms.ToTensor()(test_loader.dataset.test_data[160]).to(device) # bird
 
 example_1_code = N.encode(example_1.unsqueeze(0))
 example_2_code = N.encode(example_2.unsqueeze(0))
