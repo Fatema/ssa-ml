@@ -120,6 +120,7 @@ class VAE(nn.Module):
 N = VAE().to(device)
 
 optimiser = torch.optim.Adam(N.parameters(), lr=0.001)
+
 epoch = 0
 
 # VAE loss has a reconstruction term and a KL divergence term summed over all elements and the batch
@@ -159,11 +160,14 @@ while (epoch < 100):
     example_1 = (test_loader.dataset[13][0]).to(device)  # horse
     example_2 = (test_loader.dataset[160][0]).to(device) # bird
 
-    example_1_code = N.encode(example_1.unsqueeze(0))
-    example_2_code = N.encode(example_2.unsqueeze(0))
+    ex1_mu, ex1_logvar = N.encode(example_1.unsqueeze(0))
+    ex1_z = N.reparameterize(ex1_mu, ex1_logvar)
+
+    ex2_mu, ex2_logvar = N.encode(example_2.unsqueeze(0))
+    ex2_z = N.reparameterize(ex2_mu, ex2_logvar)
 
     # this is some sad blurry excuse of a Pegasus, hopefully you can make a better one
-    bad_pegasus = N.decode(0.9*example_1_code + 0.1*example_2_code).squeeze(0)
+    bad_pegasus = N.decode(0.9*ex1_z + 0.1*ex2_z).squeeze(0)
 
     pegasus = bad_pegasus.cpu().data.permute(0,2,1).contiguous().permute(2,1,0)
 
@@ -183,11 +187,14 @@ while (epoch < 100):
 example_1 = (test_loader.dataset[13][0]).to(device)  # horse
 example_2 = (test_loader.dataset[160][0]).to(device) # bird
 
-example_1_code = N.encode(example_1.unsqueeze(0))
-example_2_code = N.encode(example_2.unsqueeze(0))
+ex1_mu, ex1_logvar = N.encode(example_1.unsqueeze(0))
+ex1_z = N.reparameterize(ex1_mu, ex1_logvar)
+
+ex2_mu, ex2_logvar = N.encode(example_2.unsqueeze(0))
+ex2_z = N.reparameterize(ex2_mu, ex2_logvar)
 
 # this is some sad blurry excuse of a Pegasus, hopefully you can make a better one
-bad_pegasus = N.decode(0.9*example_1_code + 0.1*example_2_code).squeeze(0)
+bad_pegasus = N.decode(0.9*ex1_z + 0.1*ex2_z).squeeze(0)
 
 pegasus = bad_pegasus.cpu().data.permute(0,2,1).contiguous().permute(2,1,0)
 
