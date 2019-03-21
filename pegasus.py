@@ -146,6 +146,6 @@ plt.grid(False)
 plt.imshow(bad_pegasus.cpu().data.permute(0,2,1).contiguous().permute(2,1,0))
 
 vis._send({
-       data=plt.data,
-       layout=plt.layout,
+       data:plt.data,
+       layout:plt.layout,
 })
