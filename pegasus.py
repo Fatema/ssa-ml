@@ -1,6 +1,6 @@
 # main imports
 import math
-import re
+import copy
 import numpy as np
 import torch
 import torch.nn as nn
@@ -14,6 +14,8 @@ vis = visdom.Visdom(server='ncc1.clients.dur.ac.uk',port=12345)
 vis.line(X=np.array([0]), Y=np.array([[np.nan]]), win='loss')
 
 device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
+
+MODEL_PATH='~/ssa-ml/pegasus_model.pkl'
 
 # helper function to make getting another batch of data easier
 def cycle(iterable):
@@ -95,6 +97,11 @@ class MyNetwork(nn.Module):
         return x
 
 N = MyNetwork().to(device)
+try:
+    N.load_state_dict(torch.load(MODEL_PATH))
+    N.eval()
+except:
+    continue
 
 print(f'> Number of network parameters {len(torch.nn.utils.parameters_to_vector(N.parameters()))}')
 
@@ -137,6 +144,8 @@ while (epoch < 100):
     vis.image(
         pegasus.numpy().T
     )
+
+    torch.save(copy.deepcopy(N.state_dict()), 'pegasus_model.pkl')
 
     # plot metrics
     vis.line(X=np.array([epoch]), Y=np.array([[
