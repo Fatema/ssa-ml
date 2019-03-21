@@ -5,7 +5,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torchvision import transforms, datasets
-import matplotlib as plt
+import matplotlib.pyplot as plt
 
 # local version imports
 import visdom
