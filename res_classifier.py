@@ -64,10 +64,10 @@ class ResidualBlock(nn.Module):
    def __init__(self, in_features):
        super(ResidualBlock, self).__init__()
 
-       conv_block = [ nn.Conv2d(in_features, in_features, 3, stride=2, padding=1, bias=False),
+       conv_block = [ nn.Conv2d(in_features, in_features, 3, stride=1, padding=1, bias=False),
                       nn.BatchNorm2d(in_features),
                       nn.ReLU(inplace=True),
-                      nn.Conv2d(in_features, in_features, 3, stride=2, padding=1, bias=False),
+                      nn.Conv2d(in_features, in_features, 3, stride=1, padding=1, bias=False),
                       nn.BatchNorm2d(in_features) ]
 
        self.conv_block = nn.Sequential(*conv_block)
