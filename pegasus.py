@@ -9,7 +9,7 @@ from torchvision import transforms, datasets
 # local version imports
 import visdom
 vis = visdom.Visdom(server='ncc1.clients.dur.ac.uk',port=12345)
-vis.line(X=np.array([0]), Y=np.array([[np.nan, np.nan]]), win='loss')
+vis.line(X=np.array([0]), Y=np.array([[np.nan]]), win='loss')
 
 device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
 
@@ -125,7 +125,7 @@ while (epoch < 100):
     vis.line(X=np.array([epoch]), Y=np.array([[
         train_loss_arr.mean()
     ]]), win='loss', opts=dict(title='loss',xlabel='epoch', ylabel='loss', ytype='log', legend=[
-        'train loss',
+        'train loss'
     ]), update='append')
 
     epoch = epoch + 1
