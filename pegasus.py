@@ -133,8 +133,8 @@ while (epoch < 5):
     epoch = epoch + 1
 
 
-example_1 = transforms.ToTensor()(test_loader.dataset.test_data[13]).to(device)  # horse
-example_2 = transforms.ToTensor()(test_loader.dataset.test_data[160]).to(device) # bird
+example_1 = (test_loader.dataset[13][0]).to(device)  # horse
+example_2 = (test_loader.dataset[160][0]).to(device) # bird
 
 example_1_code = N.encode(example_1.unsqueeze(0))
 example_2_code = N.encode(example_2.unsqueeze(0))
@@ -143,13 +143,9 @@ example_2_code = N.encode(example_2.unsqueeze(0))
 bad_pegasus = N.decode(0.9*example_1_code + 0.1*example_2_code).squeeze(0)
 
 plt.grid(False)
-imgdata = bad_pegasus.cpu().data.permute(0,2,1).contiguous().permute(2,1,0)
-plt.savefig(imgdata, format='svg')
+plt.imshow(bad_pegasus.cpu().data.permute(0,2,1).contiguous().permute(2,1,0))
 
-svg_str= imgdata.getvalue()
-
-# Make sure we can scale the SVG in Visdom
-svg_str = re.sub('width=".*pt"', 'width="100%"', svg_str)
-svg_str = re.sub('height=".*pt"', 'height="100%"', svg_str)
-
-vis.svg(svg_str)
+vis._send({
+       data=plt.data,
+       layout=plt.layout,
+})
