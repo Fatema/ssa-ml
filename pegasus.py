@@ -5,6 +5,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torchvision import transforms, datasets
+import matplotlib as plt
 
 # local version imports
 import visdom
@@ -30,9 +31,9 @@ mean = (0.5,0.5,0.5)
 std = (0.5,0.5,0.5)
 
 training_transforms = transforms.Compose([
-    # transforms.RandomRotation(rotation_degrees),
-    # transforms.RandomResizedCrop(input_shape),
-    # transforms.RandomHorizontalFlip(),
+    transforms.RandomRotation(rotation_degrees),
+    transforms.RandomResizedCrop(input_shape),
+    transforms.RandomHorizontalFlip(),
     transforms.Resize(scale),
     transforms.ToTensor(),
     transforms.Normalize(mean, std)
@@ -102,7 +103,7 @@ epoch = 0
 
 # main training loop
 # training loop
-while (epoch < 100):
+while (epoch < 5):
     
     # arrays for metrics
     logs = {}
