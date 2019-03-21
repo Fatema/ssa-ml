@@ -20,7 +20,7 @@ def cycle(iterable):
         for x in iterable:
             yield x
 
-class_names = ['apple','aquarium_fish','baby','bear','beaver','bed','bee','beetle','bicycle','bottle','bowl','boy','bridge','bus','butterfly','camel','can','castle','caterpillar','cattle','chair','chimpanzee','clock','cloud','cockroach','couch','crab','crocodile','cup','dinosaur','dolphin','elephant','flatfish','forest','fox','girl','hamster','house','kangaroo','computer_keyboard','lamp','lawn_mower','leopard','lion','lizard','lobster','man','maple_tree','motorcycle','mountain','mouse','mushroom','oak_tree','orange','orchid','otter','palm_tree','pear','pickup_truck','pine_tree','plain','plate','poppy','porcupine','possum','rabbit','raccoon','ray','road','rocket','rose','sea','seal','shark','shrew','skunk','skyscraper','snail','snake','spider','squirrel','streetcar','sunflower','sweet_pepper','table','tank','telephone','television','tiger','tractor','train','trout','tulip','turtle','wardrobe','whale','willow_tree','wolf','woman','worm',]
+class_names = ['airplane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']
 
 
 #transforms 
@@ -31,9 +31,9 @@ mean = (0.5,0.5,0.5)
 std = (0.5,0.5,0.5)
 
 training_transforms = transforms.Compose([
-    transforms.RandomRotation(rotation_degrees),
-    transforms.RandomResizedCrop(input_shape),
-    transforms.RandomHorizontalFlip(),
+    # transforms.RandomRotation(rotation_degrees),
+    # transforms.RandomResizedCrop(input_shape),
+    # transforms.RandomHorizontalFlip(),
     transforms.Resize(scale),
     transforms.ToTensor(),
     transforms.Normalize(mean, std)
@@ -46,11 +46,11 @@ testing_transforms = transforms.Compose([
 ])
 
 train_loader = torch.utils.data.DataLoader(
-    torchvision.datasets.CIFAR100('data', train=True, download=True, transform=training_transforms),
+    torchvision.datasets.CIFAR10('data', train=True, download=True, transform=training_transforms),
     shuffle=True, batch_size=64, drop_last=True)
 
 test_loader = torch.utils.data.DataLoader(
-    torchvision.datasets.CIFAR100('data', train=False, download=True, transform=testing_transforms),
+    torchvision.datasets.CIFAR10('data', train=False, download=True, transform=testing_transforms),
     shuffle=False, batch_size=64, drop_last=True)
 
 train_iterator = iter(cycle(train_loader))
@@ -145,32 +145,25 @@ while (epoch < 100):
         gen_loss_arr = np.append(gen_loss_arr, loss_g.cpu().data)
         dis_loss_arr = np.append(dis_loss_arr, loss_d.cpu().data)
 
-    # iterate entire test dataset
-    for x,t in test_loader:
-        x,t = x.to(device), t.to(device)
-
-        p = N(x).view(x.size(0), len(class_names))
-        loss = torch.nn.functional.cross_entropy(p, t)
-        pred = p.argmax(dim=1, keepdim=True)
-
-        test_loss_arr = np.append(test_loss_arr, loss.data.cpu().numpy() )
-        test_acc_arr = np.append(test_acc_arr, pred.data.eq(t.view_as(pred)).float().mean().item())
-
     # plot metrics
     vis.line(X=np.array([epoch]), Y=np.array([[
-        train_loss_arr.mean(),
-        test_loss_arr.mean()
+        gen_loss_arr.mean(),
+        dis_loss_arr.mean()
     ]]), win='loss', opts=dict(title='loss',xlabel='epoch', ylabel='loss', ytype='log', legend=[
-        'train loss',
-        'test loss'
+        'gen loss',
+        'dis loss'
     ]), update='append')
 
-    vis.line(X=np.array([epoch]), Y=np.array([[
-        train_acc_arr.mean(),
-        test_acc_arr.mean()
-    ]]), win='acc', opts=dict(title='acc',xlabel='epoch', ylabel='loss', ytype='log', legend=[
-        'train accuracy',
-        'test accuracy'
-    ]), update='append')
+    epoch = epoch + 1
 
-    epoch = epoch+1
+example_1 = torchvision.transforms.ToTensor()(test_loader.dataset.test_data[13]).to(device)  # horse
+example_2 = torchvision.transforms.ToTensor()(test_loader.dataset.test_data[160]).to(device) # bird
+
+example_1_code = N.encode(example_1.unsqueeze(0))
+example_2_code = N.encode(example_2.unsqueeze(0))
+
+# this is some sad blurry excuse of a Pegasus, hopefully you can make a better one
+bad_pegasus = N.decode(0.9*example_1_code + 0.1*example_2_code).squeeze(0)
+
+plt.grid(False)
+viz.matplot(plt.imshow(bad_pegasus.cpu().data.permute(0,2,1).contiguous().permute(2,1,0), cmap=plt.cm.binary))
