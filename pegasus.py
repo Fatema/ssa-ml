@@ -123,6 +123,21 @@ while (epoch < 100):
 
         train_loss_arr = np.append(train_loss_arr, loss.cpu().data)
 
+    example_1 = (test_loader.dataset[13][0]).to(device)  # horse
+    example_2 = (test_loader.dataset[160][0]).to(device) # bird
+
+    example_1_code = N.encode(example_1.unsqueeze(0))
+    example_2_code = N.encode(example_2.unsqueeze(0))
+
+    # this is some sad blurry excuse of a Pegasus, hopefully you can make a better one
+    bad_pegasus = N.decode(0.9*example_1_code + 0.1*example_2_code).squeeze(0)
+
+    pegasus = bad_pegasus.cpu().data.permute(0,2,1).contiguous().permute(2,1,0)
+
+    vis.image(
+        pegasus.numpy().T
+    )
+
     # plot metrics
     vis.line(X=np.array([epoch]), Y=np.array([[
         train_loss_arr.mean()
@@ -131,20 +146,3 @@ while (epoch < 100):
     ]), update='append')
 
     epoch = epoch + 1
-
-
-example_1 = (test_loader.dataset[13][0]).to(device)  # horse
-example_2 = (test_loader.dataset[160][0]).to(device) # bird
-
-example_1_code = N.encode(example_1.unsqueeze(0))
-example_2_code = N.encode(example_2.unsqueeze(0))
-
-# this is some sad blurry excuse of a Pegasus, hopefully you can make a better one
-bad_pegasus = N.decode(0.9*example_1_code + 0.1*example_2_code).squeeze(0)
-
-pegasus = bad_pegasus.cpu().data.permute(0,2,1).contiguous().permute(2,1,0)
-
-vis.image(
-    pegasus.numpy().T
-)
-
