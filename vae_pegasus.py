@@ -226,8 +226,8 @@ while (epoch < 100):
         loss_bce, loss_kl = vae_loss(p, x, mu, logvar)
 
         loss_encoder = torch.sum(loss_kl) + torch.sum(loss_bce)
-        l_r = bce_loss(N_Discriminator.discriminate(x).mean(), torch.ones(1)[0].to(device)) # real -> 1
-        l_f = bce_loss(N_Discriminator.discriminate(p).mean(), torch.zeros(1)[0].to(device)) #  fake -> 0
+        l_r = bce_loss(N_Discriminator(x).mean(), torch.ones(1)[0].to(device)) # real -> 1
+        l_f = bce_loss(N_Discriminator(p).mean(), torch.zeros(1)[0].to(device)) #  fake -> 0
         loss_discriminator = (l_r + l_f)/2.0
 
         loss_decoder = torch.sum(lambda_bce * loss_bce) - (1 - loss_bce) * loss_discriminator

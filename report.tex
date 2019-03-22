@@ -24,6 +24,7 @@
 
 \begin{document}
     \maketitle 
+    The scripts for both tasks were ran in NCC cluster using visdom for the visualization of the loss and accuracy plots. Scripts are included along with this report for the best architectures for each task.
     \section*{Building a Classifier}
     The plots in Figure \ref{best} are for the best CNN architecture implmeneted for the classifier. The best accuracy for the test data was $59\%$. Figure \ref{bestarch} show the architecture of this network. A key feature for this classifier was the inclusion of randomnization for the training dataset. The data was randomnly rotated, cropped and flipped, this had significally improved the results as shown in Figure \ref{accrand}. It is clear from the plots that without randomnising the dataset the test accuracy quickly converges although the training accuracy is improving and reaching a value close to $98\%$. With randomnisation the test accuracy was continuesly improving along with the training accuracy although at a much slower pace. 
     \begin{figure}[H] 
@@ -233,7 +234,7 @@
         \caption{CNN with Residual Blocks architecture}
         \label{vaegan}
     \end{figure}
-    For this case, the encoder and decoder are treated as seperate networks. The discriminator output is used for determining the loss for the decoder thus influencing the decoder weights. The weights for the encoder were carried as before with the VAE model. The weights for the discriminator were carried as with the GAN model. The output for the VAEGAN model shown in Figure \ref{vaegan:img}
+    For this case, the encoder and decoder are treated as seperate networks. The discriminator output is used for determining the loss for the decoder thus influencing the decoder weights. The weights for the encoder were carried as before with the VAE model. The weights for the discriminator were carried as with the GAN model. The output for the VAEGAN model shown in Figure \ref{vaegan:img}. The image is still not entirely clear but more details appeared.
     \begin{figure}[H] 
         \centering
         \begin{minipage}{0.33\textwidth}
@@ -248,9 +249,10 @@
             \subcaption{VAE model}
             \label{cnn1loss}
         \end{minipage}
-        \caption{Generated Pegasus images}
+        \caption{comparison Generated Pegasus images}
         \label{vaegan:img}
     \end{figure}
+    For the next step, as part of the discriminator network a residual block was included to measure if it will give a better output. 
 
     \printbibliography
     

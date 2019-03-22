@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.27)  22 MAR 2019 12:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.27)  22 MAR 2019 13:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -662,126 +662,127 @@ Package biblatex Info: Reference segment=0 on input line 25.
  <training-data/acc_cnn_6_res_64_0.59_sep.png, id=1, 702.625pt x 451.6875pt>
 File: training-data/acc_cnn_6_res_64_0.59_sep.png Graphic file (type png)
  <use training-data/acc_cnn_6_res_64_0.59_sep.png>
-Package pdftex.def Info: training-data/acc_cnn_6_res_64_0.59_sep.png used on input line 33.
+Package pdftex.def Info: training-data/acc_cnn_6_res_64_0.59_sep.png used on input line 34.
 (pdftex.def)             Requested size: 230.18253pt x 147.97525pt.
  <training-data/loss_cnn_6_res_64_best.png, id=3, 702.625pt x 451.6875pt>
 File: training-data/loss_cnn_6_res_64_best.png Graphic file (type png)
  <use training-data/loss_cnn_6_res_64_best.png>
-Package pdftex.def Info: training-data/loss_cnn_6_res_64_best.png used on input line 39.
+Package pdftex.def Info: training-data/loss_cnn_6_res_64_best.png used on input line 40.
 (pdftex.def)             Requested size: 230.18253pt x 147.97525pt.
  <res3_cnn.png, id=4, 894.2208pt x 193.6836pt>
 File: res3_cnn.png Graphic file (type png)
  <use res3_cnn.png>
-Package pdftex.def Info: res3_cnn.png used on input line 50.
+Package pdftex.def Info: res3_cnn.png used on input line 51.
 (pdftex.def)             Requested size: 465.06004pt x 100.7308pt.
  <training-data/acc_cnn_res_64_0.41.png, id=5, 702.625pt x 451.6875pt>
 File: training-data/acc_cnn_res_64_0.41.png Graphic file (type png)
  <use training-data/acc_cnn_res_64_0.41.png>
-Package pdftex.def Info: training-data/acc_cnn_res_64_0.41.png used on input line 60.
+Package pdftex.def Info: training-data/acc_cnn_res_64_0.41.png used on input line 61.
 (pdftex.def)             Requested size: 230.18253pt x 147.97525pt.
 
-Underfull \hbox (badness 2213) in paragraph at lines 61--61
+Underfull \hbox (badness 2213) in paragraph at lines 62--62
 []\OT1/cmr/m/n/10 (a) |ac-cu-racy plot for non-randomnized train-ing
  []
 
 <training-data/acc_cnn_res_64_0.54.png, id=6, 702.625pt x 451.6875pt>
 File: training-data/acc_cnn_res_64_0.54.png Graphic file (type png)
  <use training-data/acc_cnn_res_64_0.54.png>
-Package pdftex.def Info: training-data/acc_cnn_res_64_0.54.png used on input line 66.
+Package pdftex.def Info: training-data/acc_cnn_res_64_0.54.png used on input line 67.
 (pdftex.def)             Requested size: 230.18253pt x 147.97525pt.
  [1
 
-{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/acc_cnn_6_res_64_0.59_sep.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/loss_cnn_6_res_64_best.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/res3_cnn.png>] <training-data/acc_cnn_1_0.39.png, id=19, 702.625pt x 451.6875pt>
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/acc_cnn_6_res_64_0.59_sep.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/loss_cnn_6_res_64_best.png>] <training-data/acc_cnn_1_0.39.png, id=18, 702.625pt x 451.6875pt>
 File: training-data/acc_cnn_1_0.39.png Graphic file (type png)
  <use training-data/acc_cnn_1_0.39.png>
-Package pdftex.def Info: training-data/acc_cnn_1_0.39.png used on input line 79.
+Package pdftex.def Info: training-data/acc_cnn_1_0.39.png used on input line 80.
 (pdftex.def)             Requested size: 230.18253pt x 147.97525pt.
- <training-data/loss_cnn_1.png, id=20, 702.625pt x 451.6875pt>
+ <training-data/loss_cnn_1.png, id=19, 702.625pt x 451.6875pt>
 File: training-data/loss_cnn_1.png Graphic file (type png)
  <use training-data/loss_cnn_1.png>
-Package pdftex.def Info: training-data/loss_cnn_1.png used on input line 85.
+Package pdftex.def Info: training-data/loss_cnn_1.png used on input line 86.
 (pdftex.def)             Requested size: 230.18253pt x 147.97525pt.
- <basic_cnn.png, id=21, 641.2758pt x 193.6836pt>
+ <basic_cnn.png, id=20, 641.2758pt x 193.6836pt>
 File: basic_cnn.png Graphic file (type png)
  <use basic_cnn.png>
-Package pdftex.def Info: basic_cnn.png used on input line 96.
+Package pdftex.def Info: basic_cnn.png used on input line 97.
 (pdftex.def)             Requested size: 310.04002pt x 93.64383pt.
- [2 </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/acc_cnn_res_64_0.41.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/acc_cnn_res_64_0.54.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/acc_cnn_1_0.39.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/loss_cnn_1.png>] <training-data/acc_cnn_2_0.37.png, id=29, 702.625pt x 451.6875pt>
+ [2 </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/res3_cnn.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/acc_cnn_res_64_0.41.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/acc_cnn_res_64_0.54.png>] <training-data/acc_cnn_2_0.37.png, id=27, 702.625pt x 451.6875pt>
 File: training-data/acc_cnn_2_0.37.png Graphic file (type png)
  <use training-data/acc_cnn_2_0.37.png>
-Package pdftex.def Info: training-data/acc_cnn_2_0.37.png used on input line 108.
+Package pdftex.def Info: training-data/acc_cnn_2_0.37.png used on input line 109.
 (pdftex.def)             Requested size: 230.18253pt x 147.97525pt.
- <training-data/loss_cnn_2.png, id=30, 702.625pt x 451.6875pt>
+ <training-data/loss_cnn_2.png, id=28, 702.625pt x 451.6875pt>
 File: training-data/loss_cnn_2.png Graphic file (type png)
  <use training-data/loss_cnn_2.png>
-Package pdftex.def Info: training-data/loss_cnn_2.png used on input line 114.
+Package pdftex.def Info: training-data/loss_cnn_2.png used on input line 115.
 (pdftex.def)             Requested size: 230.18253pt x 147.97525pt.
- <res_cnn.png, id=31, 759.7986pt x 193.6836pt>
+ <res_cnn.png, id=29, 759.7986pt x 193.6836pt>
 File: res_cnn.png Graphic file (type png)
  <use res_cnn.png>
-Package pdftex.def Info: res_cnn.png used on input line 126.
+Package pdftex.def Info: res_cnn.png used on input line 127.
 (pdftex.def)             Requested size: 361.71336pt x 92.20752pt.
+ [3 </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/acc_cnn_1_0.39.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/loss_cnn_1.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/basic_cnn.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/acc_cnn_2_0.37.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/loss_cnn_2.png>]
 File: training-data/acc_cnn_res_64_0.54.png Graphic file (type png)
  <use training-data/acc_cnn_res_64_0.54.png>
-Package pdftex.def Info: training-data/acc_cnn_res_64_0.54.png used on input line 136.
+Package pdftex.def Info: training-data/acc_cnn_res_64_0.54.png used on input line 137.
 (pdftex.def)             Requested size: 230.18253pt x 147.97525pt.
- <training-data/loss_cnn_res_64.png, id=32, 702.625pt x 451.6875pt>
+ <training-data/loss_cnn_res_64.png, id=38, 702.625pt x 451.6875pt>
 File: training-data/loss_cnn_res_64.png Graphic file (type png)
  <use training-data/loss_cnn_res_64.png>
-Package pdftex.def Info: training-data/loss_cnn_res_64.png used on input line 142.
+Package pdftex.def Info: training-data/loss_cnn_res_64.png used on input line 143.
 (pdftex.def)             Requested size: 230.18253pt x 147.97525pt.
- [3 </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/basic_cnn.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/acc_cnn_2_0.37.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/loss_cnn_2.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/res_cnn.png>]
 File: training-data/acc_cnn_res_64_0.41.png Graphic file (type png)
  <use training-data/acc_cnn_res_64_0.41.png>
-Package pdftex.def Info: training-data/acc_cnn_res_64_0.41.png used on input line 154.
+Package pdftex.def Info: training-data/acc_cnn_res_64_0.41.png used on input line 155.
 (pdftex.def)             Requested size: 230.18253pt x 147.97525pt.
- <training-data/loss_cnn_res_64_2.png, id=40, 702.625pt x 451.6875pt>
+ <training-data/loss_cnn_res_64_2.png, id=39, 702.625pt x 451.6875pt>
 File: training-data/loss_cnn_res_64_2.png Graphic file (type png)
  <use training-data/loss_cnn_res_64_2.png>
-Package pdftex.def Info: training-data/loss_cnn_res_64_2.png used on input line 160.
+Package pdftex.def Info: training-data/loss_cnn_res_64_2.png used on input line 161.
 (pdftex.def)             Requested size: 230.18253pt x 147.97525pt.
- <res2_cnn.png, id=41, 858.0858pt x 193.6836pt>
+ <res2_cnn.png, id=40, 858.0858pt x 193.6836pt>
 File: res2_cnn.png Graphic file (type png)
  <use res2_cnn.png>
-Package pdftex.def Info: res2_cnn.png used on input line 172.
+Package pdftex.def Info: res2_cnn.png used on input line 173.
 (pdftex.def)             Requested size: 413.3867pt x 93.30988pt.
+ [4 </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/res_cnn.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/loss_cnn_res_64.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/loss_cnn_res_64_2.png>]
 File: res3_cnn.png Graphic file (type png)
  <use res3_cnn.png>
-Package pdftex.def Info: res3_cnn.png used on input line 181.
+Package pdftex.def Info: res3_cnn.png used on input line 182.
 (pdftex.def)             Requested size: 465.06004pt x 100.7308pt.
- [4 </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/loss_cnn_res_64.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/loss_cnn_res_64_2.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/res2_cnn.png>] <training-data/acc_cnn_6_res_64_0.56.png, id=48, 702.625pt x 451.6875pt>
+ <training-data/acc_cnn_6_res_64_0.56.png, id=47, 702.625pt x 451.6875pt>
 File: training-data/acc_cnn_6_res_64_0.56.png Graphic file (type png)
  <use training-data/acc_cnn_6_res_64_0.56.png>
-Package pdftex.def Info: training-data/acc_cnn_6_res_64_0.56.png used on input line 191.
+Package pdftex.def Info: training-data/acc_cnn_6_res_64_0.56.png used on input line 192.
 (pdftex.def)             Requested size: 230.18253pt x 147.97525pt.
- <training-data/loss_cnn_6_res_64.png, id=49, 702.625pt x 451.6875pt>
+ <training-data/loss_cnn_6_res_64.png, id=48, 702.625pt x 451.6875pt>
 File: training-data/loss_cnn_6_res_64.png Graphic file (type png)
  <use training-data/loss_cnn_6_res_64.png>
-Package pdftex.def Info: training-data/loss_cnn_6_res_64.png used on input line 197.
+Package pdftex.def Info: training-data/loss_cnn_6_res_64.png used on input line 198.
 (pdftex.def)             Requested size: 230.18253pt x 147.97525pt.
- <training-data/autoencoder_basic.png, id=50, 263.98625pt x 258.9675pt>
+ <training-data/autoencoder_basic.png, id=49, 263.98625pt x 258.9675pt>
 File: training-data/autoencoder_basic.png Graphic file (type png)
  <use training-data/autoencoder_basic.png>
-Package pdftex.def Info: training-data/autoencoder_basic.png used on input line 212.
+Package pdftex.def Info: training-data/autoencoder_basic.png used on input line 213.
 (pdftex.def)             Requested size: 155.02pt x 152.0703pt.
- <training-data/vae.png, id=51, 265.99374pt x 251.94125pt>
+ <training-data/vae.png, id=50, 265.99374pt x 251.94125pt>
 File: training-data/vae.png Graphic file (type png)
  <use training-data/vae.png>
-Package pdftex.def Info: training-data/vae.png used on input line 218.
+Package pdftex.def Info: training-data/vae.png used on input line 219.
 (pdftex.def)             Requested size: 155.02pt x 146.83337pt.
- [5 </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/acc_cnn_6_res_64_0.56.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/loss_cnn_6_res_64.png>] <vaegan.png, id=57, 406.1574pt x 219.7008pt>
+ [5 </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/res2_cnn.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/acc_cnn_6_res_64_0.56.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/loss_cnn_6_res_64.png>] <vaegan.png, id=57, 406.1574pt x 219.7008pt>
 File: vaegan.png Graphic file (type png)
  <use vaegan.png>
-Package pdftex.def Info: vaegan.png used on input line 230.
+Package pdftex.def Info: vaegan.png used on input line 231.
 (pdftex.def)             Requested size: 230.18253pt x 124.51pt.
  <training-data/vaegan_img.png, id=58, 258.9675pt x 252.945pt>
 File: training-data/vaegan_img.png Graphic file (type png)
  <use training-data/vaegan_img.png>
-Package pdftex.def Info: training-data/vaegan_img.png used on input line 241.
+Package pdftex.def Info: training-data/vaegan_img.png used on input line 242.
 (pdftex.def)             Requested size: 155.02pt x 151.42079pt.
 File: training-data/vae.png Graphic file (type png)
  <use training-data/vae.png>
-Package pdftex.def Info: training-data/vae.png used on input line 247.
+Package pdftex.def Info: training-data/vae.png used on input line 248.
 (pdftex.def)             Requested size: 155.02pt x 146.83337pt.
  [6 </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/autoencoder_basic.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/vae.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/vaegan.png>] [7 </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/vaegan_img.png>] (/Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/report.aux)
 
@@ -794,13 +795,13 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 Here is how much of TeX's memory you used:
  11923 strings out of 493014
  197501 string characters out of 6133350
- 718223 words of memory out of 5000000
+ 719223 words of memory out of 5000000
  15300 multiletter control sequences out of 15000+600000
  9909 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  36i,9n,45p,838b,1425s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on /Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/report.pdf (7 pages, 611853 bytes).
+Output written on /Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/report.pdf (7 pages, 612179 bytes).
 PDF statistics:
  97 PDF objects out of 1000 (max. 8388607)
  40 compressed objects within 1 object stream
