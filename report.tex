@@ -204,7 +204,24 @@
     On the other hand for the architecture in Figure \ref{arch6sep} which is the best architecture for this task, the test accuracy improved to $59\%$, Figure \ref{best}. Unlike the previous architecture the test accuracy did not converge around epoch 60 and kept improving along with the training accuracy. The parameters used of those networks were tested as well, however changing those parameters did not result in a much better performing classifier. The batch size was also modified however a smaller batch size did not improve the learning and an increase batch size did not provide a greater improvment.
 
     \section*{Generating a Pegasus}
-
+    For the intial steps for this task, the simple Autocoder was trained after modifing the datsets to be rescalled and normalized and similarly to VAE model. Figure \ref{pegasus} shows the outputs for generating a pegasus with those two models.
+    \begin{figure}[H] 
+        \centering
+        \begin{minipage}{0.49\textwidth}
+            \centering
+            \includegraphics[width=1\textwidth]{{autoencoder_basic}.png}
+            \subcaption{accuracy plot}
+            \label{cnn1acc}
+        \end{minipage}
+        \begin{minipage}{0.49\textwidth}
+            \centering
+            \includegraphics[width=1\textwidth]{{vae}.png}
+            \subcaption{loss plot}
+            \label{cnn1loss}
+        \end{minipage}
+        \caption{CNN with 6 Residual Blocks included, training dataset was randomnized}
+        \label{pegasus}
+    \end{figure}
 
     
 \end{document}

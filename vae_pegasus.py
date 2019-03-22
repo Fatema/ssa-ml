@@ -207,7 +207,7 @@ while (epoch < 100):
         l_f = bce_loss(N_Discriminator.discriminate(p).mean(), torch.zeros(1)[0].to(device)) #  fake -> 0
         loss_discriminator = (l_r + l_f)/2.0
 
-        loss_decoder = torch.sum(lambda_bce * loss_bce) - (1.0 - loss_bce) * loss_discriminator
+        loss_decoder = torch.sum(lambda_bce * loss_bce) - loss_discriminator
 
         loss_encoder.backward(retain_graph=True)
         loss_decoder.backward(retain_graph=True)
