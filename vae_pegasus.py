@@ -15,6 +15,7 @@ vis.line(X=np.array([0]), Y=np.array([[np.nan,np.nan,np.nan]]), win='loss')
 
 device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
 
+# those models were used for visua;izing in jupyter notebook as visdom was being bad
 ENCODER_MODEL_PATH = 'encoder_model.pkl'
 DECODER_MODEL_PATH = 'decoder_model.pkl'
 DISCRIMINATOR_MODEL_PATH = 'discriminator_model.pkl'
@@ -250,7 +251,6 @@ while (epoch < 100):
     ex1_z, ex1_mu, ex1_logvar = N_Encoder(example_1.unsqueeze(0))
     ex2_z, ex2_mu, ex2_logvar = N_Encoder(example_2.unsqueeze(0))
 
-    # this is some sad blurry excuse of a Pegasus, hopefully you can make a better one
     bad_pegasus = N_Decoder(0.9*ex1_z + 0.1*ex2_z).squeeze(0)
 
     pegasus = bad_pegasus.cpu().data.permute(0,2,1).contiguous().permute(2,1,0)

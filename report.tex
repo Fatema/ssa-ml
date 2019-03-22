@@ -237,13 +237,19 @@
     For this case, the encoder and decoder are treated as seperate networks. The discriminator output is used for determining the loss for the decoder thus influencing the decoder weights. The weights for the encoder were carried as before with the VAE model. The weights for the discriminator were carried as with the GAN model. The output for the VAEGAN model shown in Figure \ref{vaegan:img}. The image is still not entirely clear but more details appeared.
     \begin{figure}[H] 
         \centering
-        \begin{minipage}{0.33\textwidth}
+        \begin{minipage}{0.30\textwidth}
             \centering
             \includegraphics[width=1\textwidth]{{vaegan_img}.png}
             \subcaption{VAEGAN model}
             \label{cnn1acc}
         \end{minipage}
-        \begin{minipage}{0.33\textwidth}
+        \begin{minipage}{0.30\textwidth}
+            \centering
+            \includegraphics[width=1\textwidth]{{res_vaegan}.png}
+            \subcaption{VAEGAN with discriminator having 3 residual blocks model}
+            \label{vaeganres}
+        \end{minipage}
+        \begin{minipage}{0.30\textwidth}
             \centering
             \includegraphics[width=1\textwidth]{{vae}.png}
             \subcaption{VAE model}
@@ -252,7 +258,7 @@
         \caption{comparison Generated Pegasus images}
         \label{vaegan:img}
     \end{figure}
-    For the next step, as part of the discriminator network a residual block was included to measure if it will give a better output. 
+    For the next step, as part of the discriminator network a residual block was included to measure if it will give a better output. The results shown in Figure \ref{vaeganres}. Still not much clear but again more details appear. And this appears to give the best results as the models complexity increases.  
 
     \printbibliography
     
