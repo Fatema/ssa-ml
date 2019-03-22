@@ -191,7 +191,9 @@ while (epoch < 100):
         x,t = next(train_iterator)
         x,t = x.to(device), t.to(device)
 
-        optimiser.zero_grad()
+        optimiser_encoder.zero_grad()
+        optimiser_decoder.zero_grad()
+        optimiser_discriminator.zero_grad()
         
         z, mu, logvar = N_Encoder(x)
         p = N_Decoder(z)

@@ -1,9 +1,0 @@
-[0] Config.pm:343> INFO - This is Biber 2.5
-[0] Config.pm:346> INFO - Logfile is 'report.blg'
-[59] biber-darwin:290> INFO - === Fri Mar 22, 2019, 09:43:18
-[87] Biber.pm:351> INFO - Reading 'report.bcf'
-[232] Biber.pm:776> INFO - Found 0 citekeys in bib section 0
-[244] Utils.pm:149> WARN - The file 'report.bcf' does not contain any citations!
-[256] bbl.pm:526> INFO - Writing 'report.bbl' with encoding 'ascii'
-[257] bbl.pm:619> INFO - Output to report.bbl
-[257] Biber.pm:108> INFO - WARNINGS: 1
