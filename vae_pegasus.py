@@ -209,9 +209,9 @@ while (epoch < 100):
 
         loss_decoder = torch.sum(lambda_bce * loss_bce) - (1.0 - loss_bce) * loss_discriminator
 
-        loss_encoder.backward()
-        loss_decoder.backward()
-        loss_discriminator.backward()
+        loss_encoder.backward(retain_graph=True)
+        loss_decoder.backward(retain_graph=True)
+        loss_discriminator.backward(retain_graph=True)
 
         optimiser_encoder.step()
         optimiser_decoder.step()
