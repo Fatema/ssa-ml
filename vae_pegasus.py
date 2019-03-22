@@ -160,6 +160,8 @@ optimiser_encoder = torch.optim.Adam(N_Encoder.parameters(), lr=0.001)
 optimiser_decoder = torch.optim.Adam(N_Decoder.parameters(), lr=0.001)
 optimiser_discriminator = torch.optim.Adam(N_Discriminator.parameters(), lr=0.001)
 
+bce_loss = nn.BCELoss()
+
 epoch = 0
 
 # VAE loss has a reconstruction term and a KL divergence term summed over all elements and the batch
