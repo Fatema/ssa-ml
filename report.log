@@ -1,0 +1,758 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.27)  22 MAR 2019 10:34
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**/Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/report.tex
+(/Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/report.tex
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.sty (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+\lst@mode=\count87
+\lst@gtempboxa=\box26
+\lst@token=\toks15
+\lst@length=\count88
+\lst@currlwidth=\dimen103
+\lst@column=\count89
+\lst@pos=\count90
+\lst@lostspace=\dimen104
+\lst@width=\dimen105
+\lst@newlines=\count91
+\lst@lineno=\count92
+\lst@maxwidth=\dimen106
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count93
+\lst@skipnumbers=\count94
+\lst@framebox=\box27
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/05/09 v1.1c Standard LaTeX Color (DPC)
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 144.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+ (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+) (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count95
+)) (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/03/10 v2.15b AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen107
+)) (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen108
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count96
+LaTeX Info: Redefining \frac on input line 199.
+\uproot@=\count97
+\leftroot@=\count98
+LaTeX Info: Redefining \overline on input line 297.
+\classnum@=\count99
+\DOTSCASE@=\count100
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
+\Mathstrutbox@=\box28
+\strutbox@=\box29
+\big@size=\dimen109
+LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
+\macc@depth=\count101
+\c@MaxMatrixCols=\count102
+\dotsspace@=\muskip10
+\c@parentequation=\count103
+\dspbrk@lvl=\count104
+\tag@help=\toks17
+\row@=\count105
+\column@=\count106
+\maxfields@=\count107
+\andhelp@=\toks18
+\eqnshift@=\dimen110
+\alignsep@=\dimen111
+\tagshift@=\dimen112
+\tagwidth@=\dimen113
+\totwidth@=\dimen114
+\lineht@=\dimen115
+\@envbody=\toks19
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2739.
+LaTeX Info: Redefining \] on input line 2740.
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen116
+\captionmargin@=\dimen117
+\captionwidth=\dimen118
+\caption@tempdima=\dimen119
+\caption@indent=\dimen120
+\caption@parindent=\dimen121
+\caption@hangindent=\dimen122
+)
+\c@ContinuedFloat=\count108
+Package caption Info: listings package is loaded.
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+ (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+) (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+) (/usr/local/texlive/2016/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count109
+\Gm@cntv=\count110
+\c@Gm@tempcnt=\count111
+\Gm@bindingoffset=\dimen123
+\Gm@wd@mp=\dimen124
+\Gm@odd@mp=\dimen125
+\Gm@even@mp=\dimen126
+\Gm@layoutwidth=\dimen127
+\Gm@layoutheight=\dimen128
+\Gm@layouthoffset=\dimen129
+\Gm@layoutvoffset=\dimen130
+\Gm@dimlist=\toks21
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/05/09 v1.0r Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/01/02 v1.10 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 96.
+)
+\Gin@req@height=\dimen131
+\Gin@req@width=\dimen132
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2016/02/20 v1.1-142 Sub-captions (AR)
+\c@subfigure=\count112
+\c@subtable=\count113
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/mwe/mwe.sty
+Package: mwe 2012/05/15 v0.3 Package to support minimal working examples (MWE)
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/lipsum/lipsum.sty
+Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
+\c@lips@count=\count114
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/blindtext/blindtext.sty
+Package: blindtext 2012/01/06 V2.0 blindtext-Package
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+\c@blindtext=\count115
+\c@Blindtext=\count116
+\c@blind@countparstart=\count117
+\blind@countxx=\count118
+\blindtext@numBlindtext=\count119
+\blind@countyy=\count120
+\c@blindlist=\count121
+\c@blindlistlevel=\count122
+\c@blindlist@level=\count123
+\blind@listitem=\count124
+\c@blind@listcount=\count125
+\c@blind@levelcount=\count126
+\blind@mathformula=\count127
+\blind@Mathformula=\count128
+\c@blind@randomcount=\count129
+\c@blind@randommax=\count130
+\c@blind@pangramcount=\count131
+\c@blind@pangrammax=\count132
+)) (/usr/local/texlive/2016/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count133
+\float@exts=\toks22
+\float@box=\box30
+\@float@everytoks=\toks23
+\@floatcapt=\box31
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2016/04/07 v1.8p multicolumn formatting (FMi)
+\c@tracingmulticols=\count134
+\mult@box=\box32
+\multicol@leftmargin=\dimen133
+\c@unbalance=\count135
+\c@collectmore=\count136
+\doublecol@number=\count137
+\multicoltolerance=\count138
+\multicolpretolerance=\count139
+\full@width=\dimen134
+\page@free=\dimen135
+\premulticols=\dimen136
+\postmulticols=\dimen137
+\multicolsep=\skip46
+\multicolbaselineskip=\skip47
+\partial@page=\box33
+\last@line=\box34
+\maxbalancingoverflow=\dimen138
+\mult@rightbox=\box35
+\mult@grightbox=\box36
+\mult@gfirstbox=\box37
+\mult@firstbox=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\@tempa=\box52
+\@tempa=\box53
+\@tempa=\box54
+\@tempa=\box55
+\c@columnbadness=\count140
+\c@finalcolumnbadness=\count141
+\last@try=\dimen139
+\multicolovershoot=\dimen140
+\multicolundershoot=\dimen141
+\mult@nat@firstbox=\box56
+\colbreak@box=\box57
+\mc@col@check@num=\count142
+) (/usr/local/texlive/2016/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2016/04/23 3.9r The Babel package
+ (/usr/local/texlive/2016/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2012/08/20 v3.3p English support from the babel system
+ (/usr/local/texlive/2016/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2016/04/23 3.9r Babel common definitions
+\babel@savecnt=\count143
+\U@D=\dimen142
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+)) (/usr/local/texlive/2016/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2016/05/14 v3.4 programmable bibliographies (PK/JW/AB)
+ (/usr/local/texlive/2016/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2013/04/04 v0.2 Provides if(tex) conditional for PDFTeX, XeTeX, and LuaTeX
+) (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2016/05/10 v0.21 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count144
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+ (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+ (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+))) (/usr/local/texlive/2016/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count145
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+)) (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+) (/usr/local/texlive/2016/texmf-dist/tex/generic/xstring/xstring.sty (/usr/local/texlive/2016/texmf-dist/tex/generic/xstring/xstring.tex
+\@xs@message=\write3
+\integerpart=\count146
+\decimalpart=\count147
+)
+Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
+)
+\c@tabx@nest=\count148
+\c@listtotal=\count149
+\c@listcount=\count150
+\c@liststart=\count151
+\c@liststop=\count152
+\c@citecount=\count153
+\c@citetotal=\count154
+\c@multicitecount=\count155
+\c@multicitetotal=\count156
+\c@instcount=\count157
+\c@maxnames=\count158
+\c@minnames=\count159
+\c@maxitems=\count160
+\c@minitems=\count161
+\c@citecounter=\count162
+\c@savedcitecounter=\count163
+\c@uniquelist=\count164
+\c@uniquename=\count165
+\c@refsection=\count166
+\c@refsegment=\count167
+\c@maxextratitle=\count168
+\c@maxextratitleyear=\count169
+\c@maxextrayear=\count170
+\c@maxextraalpha=\count171
+\c@abbrvpenalty=\count172
+\c@highnamepenalty=\count173
+\c@lownamepenalty=\count174
+\c@maxparens=\count175
+\c@parenlevel=\count176
+\blx@tempcnta=\count177
+\blx@tempcntb=\count178
+\blx@tempcntc=\count179
+\blx@maxsection=\count180
+\blx@maxsegment@0=\count181
+\blx@notetype=\count182
+\blx@parenlevel@text=\count183
+\blx@parenlevel@foot=\count184
+\blx@sectionciteorder@0=\count185
+\labelnumberwidth=\skip48
+\labelalphawidth=\skip49
+\biblabelsep=\skip50
+\bibitemsep=\skip51
+\bibnamesep=\skip52
+\bibinitsep=\skip53
+\bibparsep=\skip54
+\bibhang=\skip55
+\blx@bcfin=\read1
+\blx@bcfout=\write4
+\c@mincomprange=\count186
+\c@maxcomprange=\count187
+\c@mincompwidth=\count188
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/biblatex/blx-dm.def)
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count189
+\c@savedafterword=\count190
+\c@annotator=\count191
+\c@savedannotator=\count192
+\c@author=\count193
+\c@savedauthor=\count194
+\c@bookauthor=\count195
+\c@savedbookauthor=\count196
+\c@commentator=\count197
+\c@savedcommentator=\count198
+\c@editor=\count199
+\c@savededitor=\count266
+\c@editora=\count267
+\c@savededitora=\count268
+\c@editorb=\count269
+\c@savededitorb=\count270
+\c@editorc=\count271
+\c@savededitorc=\count272
+\c@foreword=\count273
+\c@savedforeword=\count274
+\c@holder=\count275
+\c@savedholder=\count276
+\c@introduction=\count277
+\c@savedintroduction=\count278
+\c@namea=\count279
+\c@savednamea=\count280
+\c@nameb=\count281
+\c@savednameb=\count282
+\c@namec=\count283
+\c@savednamec=\count284
+\c@translator=\count285
+\c@savedtranslator=\count286
+\c@shortauthor=\count287
+\c@savedshortauthor=\count288
+\c@shorteditor=\count289
+\c@savedshorteditor=\count290
+\c@labelname=\count291
+\c@savedlabelname=\count292
+\c@institution=\count293
+\c@savedinstitution=\count294
+\c@lista=\count295
+\c@savedlista=\count296
+\c@listb=\count297
+\c@savedlistb=\count298
+\c@listc=\count299
+\c@savedlistc=\count300
+\c@listd=\count301
+\c@savedlistd=\count302
+\c@liste=\count303
+\c@savedliste=\count304
+\c@listf=\count305
+\c@savedlistf=\count306
+\c@location=\count307
+\c@savedlocation=\count308
+\c@organization=\count309
+\c@savedorganization=\count310
+\c@origlocation=\count311
+\c@savedoriglocation=\count312
+\c@origpublisher=\count313
+\c@savedorigpublisher=\count314
+\c@publisher=\count315
+\c@savedpublisher=\count316
+\c@language=\count317
+\c@savedlanguage=\count318
+\c@pageref=\count319
+\c@savedpageref=\count320
+\shorthandwidth=\skip56
+\shortjournalwidth=\skip57
+\shortserieswidth=\skip58
+\shorttitlewidth=\skip59
+\shortauthorwidth=\skip60
+\shorteditorwidth=\skip61
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2016/05/14 v3.4 biblatex compatibility (PK/JW/AB)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2016/05/14 v3.4 biblatex compatibility (PK/JW/AB)
+\c@textcitecount=\count321
+\c@textcitetotal=\count322
+\c@textcitemaxnames=\count323
+\c@biburlnumpenalty=\count324
+\c@biburlucpenalty=\count325
+\c@biburllcpenalty=\count326
+\c@smartand=\count327
+)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+File: numeric.bbx 2016/05/14 v3.4 biblatex bibliography style (PK/JW/AB)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2016/05/14 v3.4 biblatex bibliography style (PK/JW/AB)
+\c@bbx:relatedcount=\count328
+\c@bbx:relatedtotal=\count329
+))
+Package biblatex Info: Trying to load citation style 'numeric'...
+Package biblatex Info: ... file 'numeric.cbx' found.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
+File: numeric.cbx 2016/05/14 v3.4 biblatex citation style (PK/JW/AB)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+))
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2016/05/14 v3.4 biblatex localization (PK/JW/AB)
+)
+
+Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
+(biblatex)                Loading 'csquotes' recommended.
+
+\@quotelevel=\count330
+\@quotereset=\count331
+(/Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/report.aux
+
+LaTeX Warning: Label `notrand' multiply defined.
+
+
+LaTeX Warning: Label `sub@notrand' multiply defined.
+
+
+LaTeX Warning: Label `rand' multiply defined.
+
+
+LaTeX Warning: Label `sub@rand' multiply defined.
+
+
+LaTeX Warning: Label `arch' multiply defined.
+
+
+LaTeX Warning: Label `arch' multiply defined.
+
+
+LaTeX Warning: Label `cnn1acc' multiply defined.
+
+
+LaTeX Warning: Label `sub@cnn1acc' multiply defined.
+
+
+LaTeX Warning: Label `cnn1loss' multiply defined.
+
+
+LaTeX Warning: Label `sub@cnn1loss' multiply defined.
+
+
+LaTeX Warning: Label `cnn1acc' multiply defined.
+
+
+LaTeX Warning: Label `sub@cnn1acc' multiply defined.
+
+
+LaTeX Warning: Label `cnn1loss' multiply defined.
+
+
+LaTeX Warning: Label `sub@cnn1loss' multiply defined.
+
+)
+\openout1 = `report.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+\c@lstlisting=\count332
+ (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count333
+\scratchdimen=\dimen143
+\scratchbox=\box58
+\nofMPsegments=\count334
+\nofMParguments=\count335
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count336
+\MPscratchDim=\dimen144
+\MPnumerator=\count337
+\makeMPintoPDFobject=\count338
+\everyMPtoPDFconversion=\toks25
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: End \AtBeginDocument code.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=59.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+ (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+Package biblatex Info: No input encoding detected.
+(biblatex)             Assuming 'ascii'.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'ascii'.
+\openout4 = `report.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'report.bbl' found.
+ (/Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/report.bbl)
+Package biblatex Info: Reference section=0 on input line 25.
+Package biblatex Info: Reference segment=0 on input line 25.
+ <training-data/acc_cnn_6_res_64_0.58_sep.png, id=1, 702.625pt x 451.6875pt>
+File: training-data/acc_cnn_6_res_64_0.58_sep.png Graphic file (type png)
+ <use training-data/acc_cnn_6_res_64_0.58_sep.png>
+Package pdftex.def Info: training-data/acc_cnn_6_res_64_0.58_sep.png used on input line 33.
+(pdftex.def)             Requested size: 230.18253pt x 147.97525pt.
+ <training-data/loss_cnn_6_res_64_sep.png, id=3, 702.625pt x 451.6875pt>
+File: training-data/loss_cnn_6_res_64_sep.png Graphic file (type png)
+ <use training-data/loss_cnn_6_res_64_sep.png>
+Package pdftex.def Info: training-data/loss_cnn_6_res_64_sep.png used on input line 39.
+(pdftex.def)             Requested size: 230.18253pt x 147.97525pt.
+ <res3_cnn.png, id=4, 894.2208pt x 193.6836pt>
+File: res3_cnn.png Graphic file (type png)
+ <use res3_cnn.png>
+Package pdftex.def Info: res3_cnn.png used on input line 50.
+(pdftex.def)             Requested size: 465.06004pt x 100.7308pt.
+ <training-data/acc_cnn_res_64_0.41.png, id=5, 702.625pt x 451.6875pt>
+File: training-data/acc_cnn_res_64_0.41.png Graphic file (type png)
+ <use training-data/acc_cnn_res_64_0.41.png>
+Package pdftex.def Info: training-data/acc_cnn_res_64_0.41.png used on input line 60.
+(pdftex.def)             Requested size: 230.18253pt x 147.97525pt.
+
+Underfull \hbox (badness 2213) in paragraph at lines 61--61
+[]\OT1/cmr/m/n/10 (a) |ac-cu-racy plot for non-randomnized train-ing
+ []
+
+<training-data/acc_cnn_res_64_0.54.png, id=6, 702.625pt x 451.6875pt>
+File: training-data/acc_cnn_res_64_0.54.png Graphic file (type png)
+ <use training-data/acc_cnn_res_64_0.54.png>
+Package pdftex.def Info: training-data/acc_cnn_res_64_0.54.png used on input line 66.
+(pdftex.def)             Requested size: 230.18253pt x 147.97525pt.
+ [1
+
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/acc_cnn_6_res_64_0.58_sep.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/loss_cnn_6_res_64_sep.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/res3_cnn.png>] <training-data/acc_cnn_1_0.39.png, id=19, 702.625pt x 451.6875pt>
+File: training-data/acc_cnn_1_0.39.png Graphic file (type png)
+ <use training-data/acc_cnn_1_0.39.png>
+Package pdftex.def Info: training-data/acc_cnn_1_0.39.png used on input line 79.
+(pdftex.def)             Requested size: 230.18253pt x 147.97525pt.
+ <training-data/loss_cnn_1.png, id=20, 702.625pt x 451.6875pt>
+File: training-data/loss_cnn_1.png Graphic file (type png)
+ <use training-data/loss_cnn_1.png>
+Package pdftex.def Info: training-data/loss_cnn_1.png used on input line 85.
+(pdftex.def)             Requested size: 230.18253pt x 147.97525pt.
+ <basic_cnn.png, id=21, 641.2758pt x 193.6836pt>
+File: basic_cnn.png Graphic file (type png)
+ <use basic_cnn.png>
+Package pdftex.def Info: basic_cnn.png used on input line 96.
+(pdftex.def)             Requested size: 310.04002pt x 93.64383pt.
+ [2 </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/acc_cnn_res_64_0.41.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/acc_cnn_res_64_0.54.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/acc_cnn_1_0.39.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/loss_cnn_1.png>] <training-data/acc_cnn_2_0.37.png, id=29, 702.625pt x 451.6875pt>
+File: training-data/acc_cnn_2_0.37.png Graphic file (type png)
+ <use training-data/acc_cnn_2_0.37.png>
+Package pdftex.def Info: training-data/acc_cnn_2_0.37.png used on input line 108.
+(pdftex.def)             Requested size: 230.18253pt x 147.97525pt.
+ <training-data/loss_cnn_2.png, id=30, 702.625pt x 451.6875pt>
+File: training-data/loss_cnn_2.png Graphic file (type png)
+ <use training-data/loss_cnn_2.png>
+Package pdftex.def Info: training-data/loss_cnn_2.png used on input line 114.
+(pdftex.def)             Requested size: 230.18253pt x 147.97525pt.
+ <res_cnn.png, id=31, 759.7986pt x 193.6836pt>
+File: res_cnn.png Graphic file (type png)
+ <use res_cnn.png>
+Package pdftex.def Info: res_cnn.png used on input line 126.
+(pdftex.def)             Requested size: 361.71336pt x 92.20752pt.
+File: training-data/acc_cnn_res_64_0.54.png Graphic file (type png)
+ <use training-data/acc_cnn_res_64_0.54.png>
+Package pdftex.def Info: training-data/acc_cnn_res_64_0.54.png used on input line 136.
+(pdftex.def)             Requested size: 230.18253pt x 147.97525pt.
+ <training-data/loss_cnn_res_64.png, id=32, 702.625pt x 451.6875pt>
+File: training-data/loss_cnn_res_64.png Graphic file (type png)
+ <use training-data/loss_cnn_res_64.png>
+Package pdftex.def Info: training-data/loss_cnn_res_64.png used on input line 142.
+(pdftex.def)             Requested size: 230.18253pt x 147.97525pt.
+ [3 </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/basic_cnn.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/acc_cnn_2_0.37.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/loss_cnn_2.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/res_cnn.png>]
+File: training-data/acc_cnn_res_64_0.41.png Graphic file (type png)
+ <use training-data/acc_cnn_res_64_0.41.png>
+Package pdftex.def Info: training-data/acc_cnn_res_64_0.41.png used on input line 154.
+(pdftex.def)             Requested size: 230.18253pt x 147.97525pt.
+ <training-data/loss_cnn_res_64_2.png, id=40, 702.625pt x 451.6875pt>
+File: training-data/loss_cnn_res_64_2.png Graphic file (type png)
+ <use training-data/loss_cnn_res_64_2.png>
+Package pdftex.def Info: training-data/loss_cnn_res_64_2.png used on input line 160.
+(pdftex.def)             Requested size: 230.18253pt x 147.97525pt.
+ <res2_cnn.png, id=41, 858.0858pt x 193.6836pt>
+File: res2_cnn.png Graphic file (type png)
+ <use res2_cnn.png>
+Package pdftex.def Info: res2_cnn.png used on input line 172.
+(pdftex.def)             Requested size: 413.3867pt x 93.30988pt.
+File: res3_cnn.png Graphic file (type png)
+ <use res3_cnn.png>
+Package pdftex.def Info: res3_cnn.png used on input line 181.
+(pdftex.def)             Requested size: 465.06004pt x 100.7308pt.
+ [4 </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/loss_cnn_res_64.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/loss_cnn_res_64_2.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/res2_cnn.png>] <training-data/acc_cnn_6_res_64_0.56.png, id=48, 702.625pt x 451.6875pt>
+File: training-data/acc_cnn_6_res_64_0.56.png Graphic file (type png)
+ <use training-data/acc_cnn_6_res_64_0.56.png>
+Package pdftex.def Info: training-data/acc_cnn_6_res_64_0.56.png used on input line 191.
+(pdftex.def)             Requested size: 230.18253pt x 147.97525pt.
+ <training-data/loss_cnn_6_res_64.png, id=49, 702.625pt x 451.6875pt>
+File: training-data/loss_cnn_6_res_64.png Graphic file (type png)
+ <use training-data/loss_cnn_6_res_64.png>
+Package pdftex.def Info: training-data/loss_cnn_6_res_64.png used on input line 197.
+(pdftex.def)             Requested size: 230.18253pt x 147.97525pt.
+ [5 </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/acc_cnn_6_res_64_0.56.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/loss_cnn_6_res_64.png>] (/Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/report.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package logreq Info: Writing requests to 'report.run.xml'.
+\openout1 = `report.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 11764 strings out of 493014
+ 194459 string characters out of 6133350
+ 718165 words of memory out of 5000000
+ 15148 multiletter control sequences out of 15000+600000
+ 9094 words of font info for 33 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 36i,9n,39p,838b,1425s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on /Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/report.pdf (5 pages, 434332 bytes).
+PDF statistics:
+ 69 PDF objects out of 1000 (max. 8388607)
+ 25 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -15,7 +15,8 @@
 
 \addbibresource{ref.bib}
 
-\graphicspath{}
+\graphicspath{{training-data/}}
+
 
 \title{Machine Learning Assignment}
 \author{Fatema Alkhanaizi}
@@ -23,5 +24,187 @@
 
 \begin{document}
     \maketitle 
+    \section*{Building a Classifier}
+    The plots in Figure \ref{best} are for the best CNN architecture implmeneted for the classifier. The best accuracy for the test data was $58\%$. Figure \ref{bestarch} show the architecture of this network. A key feature for this classifier was the inclusion of randomnization for the training dataset. The data was randomnly rotated, cropped and flipped, this had significally improved the results as shown in Figure \ref{accrand}. It is clear from the plots that without randomnising the dataset the test accuracy quickly converges although the training accuracy is improving and reaching a value close to $98\%$. With randomnisation the test accuracy was continuesly improving along with the training accuracy although at a much slower pace. 
+    \begin{figure}[H] 
+        \centering
+        \begin{minipage}{0.49\textwidth}
+            \centering
+            \includegraphics[width=1\textwidth]{{acc_cnn_6_res_64_0.58_sep}.png}
+            \subcaption{accuracy plot}
+            \label{acc}
+        \end{minipage}
+        \begin{minipage}{0.49\textwidth}
+            \centering
+            \includegraphics[width=1\textwidth]{{loss_cnn_6_res_64_sep}.png}
+            \subcaption{loss plot}
+            \label{loss}
+        \end{minipage}
+        \caption{Best CNN results}
+        \label{best}
+    \end{figure}
+    \begin{figure}[H] 
+        \centering
+        \begin{minipage}{0.99\textwidth}
+            \centering
+            \includegraphics[width=1\textwidth]{{res3_cnn}.png}
+            \label{arch}
+        \end{minipage}
+        \caption{Best CNN architecture}
+        \label{bestarch}
+    \end{figure}
+    \begin{figure}[H] 
+        \centering
+        \begin{minipage}{0.49\textwidth}
+            \centering
+            \includegraphics[width=1\textwidth]{{acc_cnn_res_64_0.41}.png}
+            \subcaption{accuracy plot for non-randomnized training dataset}
+            \label{notrand}
+        \end{minipage}
+        \begin{minipage}{0.49\textwidth}
+            \centering
+            \includegraphics[width=1\textwidth]{{acc_cnn_res_64_0.54}.png}
+            \subcaption{accuracy plot for randomnized training dataset}
+            \label{rand}
+        \end{minipage}
+        \caption{The network accuracy with and without randomnising the training dataset}
+        \label{accrand}
+    \end{figure}
+    \section*{Other Architectures Tested}
+    As first steps, the CNN discussed in this module lectures was tested. The code of this CNN was taken from the provided material and modified accordingly to fit the purpose of this assignment. The first modification included was adding rescalling and normalizing both training and testing datasets. The batch size was increased to 64 as well. The number of epochs was also increased to 100. The results for those modifications included in Figure \ref{cnn1}. The accuracy obtained for this CNN was $39\%$. The architecture of this network is shown in Figure \ref{basicarch}.
+    \begin{figure}[H] 
+        \centering
+        \begin{minipage}{0.49\textwidth}
+            \centering
+            \includegraphics[width=1\textwidth]{{acc_cnn_1_0.39}.png}
+            \subcaption{accuracy plot}
+            \label{notrand}
+        \end{minipage}
+        \begin{minipage}{0.49\textwidth}
+            \centering
+            \includegraphics[width=1\textwidth]{{loss_cnn_1}.png}
+            \subcaption{loss plot}
+            \label{rand}
+        \end{minipage}
+        \caption{CNN with 3 convolutional network layers, training dataset was not randomnized}
+        \label{cnn1}
+    \end{figure}
+    \begin{figure}[H] 
+        \centering
+        \begin{minipage}{0.66\textwidth}
+            \centering
+            \includegraphics[width=1\textwidth]{{basic_cnn}.png}
+            \label{arch}
+        \end{minipage}
+        \caption{Basic CNN architecture}
+        \label{basicarch}
+    \end{figure}
+
+    After that randomnisation was included to the training dataset; Figure \ref{cnn2rand}. The resulted test accuracy, $37\%$ was not better than the previous test accuracy, however the convergance of the accuracy was significally slowed and thus with more complex network architecture and increased epochs this setup could provide better results than the previous setup. 
+    \begin{figure}[H] 
+        \centering
+        \begin{minipage}{0.49\textwidth}
+            \centering
+            \includegraphics[width=1\textwidth]{{acc_cnn_2_0.37}.png}
+            \subcaption{accuracy plot}
+            \label{cnn2acc}
+        \end{minipage}
+        \begin{minipage}{0.49\textwidth}
+            \centering
+            \includegraphics[width=1\textwidth]{{loss_cnn_2}.png}
+            \subcaption{loss plot}
+            \label{cnn2loss}
+        \end{minipage}
+        \caption{CNN with 3 convolutional network layers, training dataset was randomnized}
+        \label{cnn2rand}
+    \end{figure}
+    As randomnisation of the training dataset proved to be promising however this came at the cost of an increased training time; from around 30 minutes to 1 hour. The CNN architecture was improved next. Residual blocks were added to the network; Figure \ref{resarch}. Figure \ref{cnn1res} shows the accuracy and loss plots for this network. The test accuracy reached $54\%$ a big improvment from the previous network.
+    \begin{figure}[H] 
+        \centering
+        \begin{minipage}{0.77\textwidth}
+            \centering
+            \includegraphics[width=1\textwidth]{{res_cnn}.png}
+            \label{arch}
+        \end{minipage}
+        \caption{CNN with Residual Blocks architecture}
+        \label{resarch}
+    \end{figure}
+    \begin{figure}[H] 
+        \centering
+        \begin{minipage}{0.49\textwidth}
+            \centering
+            \includegraphics[width=1\textwidth]{{acc_cnn_res_64_0.54}.png}
+            \subcaption{accuracy plot}
+            \label{cnn1acc}
+        \end{minipage}
+        \begin{minipage}{0.49\textwidth}
+            \centering
+            \includegraphics[width=1\textwidth]{{loss_cnn_res_64}.png}
+            \subcaption{loss plot}
+            \label{cnn1loss}
+        \end{minipage}
+        \caption{CNN with 3 Residual Blocks included, training dataset was randomnized}
+        \label{cnn1res}
+    \end{figure}
+    As a contrast, for non-randomised dataset Figure \ref{cnn2res} shows the accuracy and loss plots. The test accuracy was $41\%$ and the loss for the test dataset seemed to be getting worst with each epoch. 
+    \begin{figure}[H] 
+        \centering
+        \begin{minipage}{0.49\textwidth}
+            \centering
+            \includegraphics[width=1\textwidth]{{acc_cnn_res_64_0.41}.png}
+            \subcaption{accuracy plot}
+            \label{cnn1acc}
+        \end{minipage}
+        \begin{minipage}{0.49\textwidth}
+            \centering
+            \includegraphics[width=1\textwidth]{{loss_cnn_res_64_2}.png}
+            \subcaption{loss plot}
+            \label{cnn1loss}
+        \end{minipage}
+        \caption{CNN with 3 Residual Blocks included, training dataset was not randomnized}
+        \label{cnn2res}
+    \end{figure}
+    The following architectures were tested next:
+    \begin{figure}[H] 
+        \centering
+        \begin{minipage}{0.88\textwidth}
+            \centering
+            \includegraphics[width=1\textwidth]{{res2_cnn}.png}
+        \end{minipage}
+        \caption{CNN with 6 consequetive Residual Blocks architecture}
+        \label{arch6cons}
+    \end{figure}
+    \begin{figure}[H] 
+        \centering
+        \begin{minipage}{0.99\textwidth}
+            \centering
+            \includegraphics[width=1\textwidth]{{res3_cnn}.png}
+        \end{minipage}
+        \caption{CNN with 3 consequetive Residual Blocks between the convolutional layers architecture}
+        \label{arch6sep}
+    \end{figure}
+    The architecture in Figure \ref{arch6cons} resulted in a slightly improved test accuracy $56\%$, Figure \ref{cnn2rescons}. Also, the test accuracy converged at a much earlier epoch, around epoch 60, than the previous network. 
+    \begin{figure}[H] 
+        \centering
+        \begin{minipage}{0.49\textwidth}
+            \centering
+            \includegraphics[width=1\textwidth]{{acc_cnn_6_res_64_0.56}.png}
+            \subcaption{accuracy plot}
+            \label{cnn1acc}
+        \end{minipage}
+        \begin{minipage}{0.49\textwidth}
+            \centering
+            \includegraphics[width=1\textwidth]{{loss_cnn_6_res_64}.png}
+            \subcaption{loss plot}
+            \label{cnn1loss}
+        \end{minipage}
+        \caption{CNN with 6 Residual Blocks included, training dataset was randomnized}
+        \label{cnn2rescons}
+    \end{figure}
+    On the other hand for the architecture in Figure \ref{arch6sep} which is the best architecture for this task, the test accuracy improved to $58\%$, Figure \ref{best}. Unlike the previous architecture the test accuracy did not converge around epoch 60 and kept improving along with the training accuracy. The parameters used of those networks were tested as well, however changing those parameters did not result in a much better performing classifier. The batch size was also modified however a smaller batch size did not improve the learning and an increase batch size did not provide a greater improvment.
+
+    \section*{Generating a Pegasus}
+    
+
     
 \end{document}
