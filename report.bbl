@@ -16,5 +16,46 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \sortlist[entry]{nty/global/}
+    \entry{vaegan}{article}{}
+      \name{author}{3}{}{%
+        {{hash=26d0ff6d6dc3e460aabbaf8180971e84}{%
+           family={Larsen},
+           family_i={L\bibinitperiod},
+           given={Anders\bibnamedelimb Boesen\bibnamedelima Lindbo},
+           given_i={A\bibinitperiod\bibinitdelim B\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=647ed74946aa9457b8cffafe25773d4a}{%
+           family={S{\o{}}nderby},
+           family_i={S\bibinitperiod},
+           given={S{\o{}}ren\bibnamedelima Kaae},
+           given_i={S\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=7862b9aae6d622aee37d7b62ba9450e7}{%
+           family={Winther},
+           family_i={W\bibinitperiod},
+           given={Ole},
+           given_i={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{24943edc040c2ecb03d228f3a204f820}
+      \strng{fullhash}{24943edc040c2ecb03d228f3a204f820}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Autoencoding beyond pixels using a learned similarity metric}
+      \field{volume}{abs/1512.09300}
+      \field{year}{2015}
+      \verb{eprint}
+      \verb 1512.09300
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1512.09300
+      \endverb
+    \endentry
+  \endsortlist
+\endrefsection
 \endinput
 

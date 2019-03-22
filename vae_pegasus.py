@@ -15,9 +15,9 @@ vis.line(X=np.array([0]), Y=np.array([[np.nan,np.nan,np.nan]]), win='loss')
 
 device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
 
-ENCODER_MODEL_PATH = 'encoder_model.plk'
-DECODER_MODEL_PATH = 'decoder_model.plk'
-DISCRIMINATOR_MODEL_PATH = 'discriminator_model.plk'
+ENCODER_MODEL_PATH = 'encoder_model.pkl'
+DECODER_MODEL_PATH = 'decoder_model.pkl'
+DISCRIMINATOR_MODEL_PATH = 'discriminator_model.pkl'
 
 # helper function to make getting another batch of data easier
 def cycle(iterable):
@@ -123,24 +123,47 @@ class Decoder(nn.Module):
     def forward(self, z):
         return self.decode(z)
 
+class ResidualBlock(nn.Module):
+   def __init__(self, in_features):
+       super(ResidualBlock, self).__init__()
+
+       conv_block = [ nn.Conv2d(in_features, in_features, 3, stride=1, padding=1, bias=False),
+                      nn.BatchNorm2d(in_features),
+                      nn.ReLU(inplace=True),
+                      nn.Conv2d(in_features, in_features, 3, stride=1, padding=1, bias=False),
+                      nn.BatchNorm2d(in_features) ]
+
+       self.conv_block = nn.Sequential(*conv_block)
+
+   def forward(self, x):
+       return x + self.conv_block(x)
+
 class Discriminator(nn.Module):
     def __init__(self, f=64):
         super(Discriminator, self).__init__()
-        self.discriminate = nn.Sequential(
-            nn.Conv2d(3, f, 4, 2, 1, bias=False),
-            nn.LeakyReLU(0.2, inplace=True),
-            nn.Conv2d(f, f*2, 4, 2, 1, bias=False),
-            nn.BatchNorm2d(f*2),
-            nn.LeakyReLU(0.2, inplace=True),
-            nn.Conv2d(f*2, f*4, 4, 2, 1, bias=False),
-            nn.BatchNorm2d(f*4),
-            nn.LeakyReLU(0.2, inplace=True),
-            nn.Conv2d(f*4, f*8, 4, 2, 1, bias=False),
-            nn.BatchNorm2d(f*8),
-            nn.LeakyReLU(0.2, inplace=True),
-            nn.Conv2d(f*8, 1, 4, 2, 1, bias=False),
-            nn.Sigmoid()
-        )
+        layers = nn.ModuleList()
+        layers.append(nn.Conv2d(3, f, 4, 2, 1, bias=False))
+        layers.append(nn.LeakyReLU(0.2, inplace=True))
+        layers.append(nn.Conv2d(f, f*2, 4, 2, 1, bias=False))
+        layers.append(nn.BatchNorm2d(f*2))
+        layers.append(nn.LeakyReLU(0.2, inplace=True))
+        layers.append(nn.Conv2d(f*2, f*4, 4, 2, 1, bias=False))
+        layers.append(nn.BatchNorm2d(f*4))
+        layers.append(ResidualBlock(f*4))
+        layers.append(ResidualBlock(f*4))
+        layers.append(ResidualBlock(f*4))
+        layers.append(nn.LeakyReLU(0.2, inplace=True))
+        layers.append(nn.Conv2d(f*4, f*8, 4, 2, 1, bias=False))
+        layers.append(nn.BatchNorm2d(f*8))
+        layers.append(nn.LeakyReLU(0.2, inplace=True))
+        layers.append(nn.Conv2d(f*8, 1, 4, 2, 1, bias=False))
+        layers.append(nn.Sigmoid())
+        self.layers = layers
+
+    def forward(self, x):
+        for m in self.layers:
+            x = m(x)
+        return x
 
 N_Encoder = Encoder().to(device)
 N_Decoder = Decoder().to(device)
@@ -207,7 +230,7 @@ while (epoch < 100):
         l_f = bce_loss(N_Discriminator.discriminate(p).mean(), torch.zeros(1)[0].to(device)) #  fake -> 0
         loss_discriminator = (l_r + l_f)/2.0
 
-        loss_decoder = torch.sum(lambda_bce * loss_bce) - loss_discriminator
+        loss_decoder = torch.sum(lambda_bce * loss_bce) - (1 - loss_bce) * loss_discriminator
 
         loss_encoder.backward(retain_graph=True)
         loss_decoder.backward(retain_graph=True)
