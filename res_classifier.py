@@ -92,13 +92,7 @@ class ConvolutionalNetwork(nn.Module):
         layers.append(ResidualBlock(128))
         layers.append(ResidualBlock(128))
         layers.append(ResidualBlock(128))
-        layers.append(nn.Conv2d(128, 256, kernel_size=4, stride=2, padding=1, bias=False))
-        layers.append(nn.BatchNorm2d(256))
-        layers.append(nn.ReLU())
-        layers.append(ResidualBlock(256))
-        layers.append(ResidualBlock(256))
-        layers.append(ResidualBlock(256))
-        layers.append(nn.Conv2d(256, 100, kernel_size=4, stride=2, padding=1, bias=False))
+        layers.append(nn.Conv2d(128, 100, kernel_size=4, stride=2, padding=1, bias=False))
         layers.append(nn.AvgPool2d((4,4)))
         self.layers = layers
 
