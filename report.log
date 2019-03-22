@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.27)  22 MAR 2019 11:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.27)  22 MAR 2019 12:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -552,6 +552,21 @@ LaTeX Warning: Label `cnn1loss' multiply defined.
 
 LaTeX Warning: Label `sub@cnn1loss' multiply defined.
 
+
+LaTeX Warning: Label `arch' multiply defined.
+
+
+LaTeX Warning: Label `cnn1acc' multiply defined.
+
+
+LaTeX Warning: Label `sub@cnn1acc' multiply defined.
+
+
+LaTeX Warning: Label `cnn1loss' multiply defined.
+
+
+LaTeX Warning: Label `sub@cnn1loss' multiply defined.
+
 )
 \openout1 = `report.aux'.
 
@@ -748,13 +763,27 @@ Package pdftex.def Info: training-data/loss_cnn_6_res_64.png used on input line 
 File: training-data/autoencoder_basic.png Graphic file (type png)
  <use training-data/autoencoder_basic.png>
 Package pdftex.def Info: training-data/autoencoder_basic.png used on input line 212.
-(pdftex.def)             Requested size: 230.18253pt x 225.80568pt.
+(pdftex.def)             Requested size: 155.02pt x 152.0703pt.
  <training-data/vae.png, id=51, 265.99374pt x 251.94125pt>
 File: training-data/vae.png Graphic file (type png)
  <use training-data/vae.png>
 Package pdftex.def Info: training-data/vae.png used on input line 218.
-(pdftex.def)             Requested size: 230.18253pt x 218.02612pt.
- [5 </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/acc_cnn_6_res_64_0.56.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/loss_cnn_6_res_64.png>] [6 </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/autoencoder_basic.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/vae.png>] (/Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/report.aux)
+(pdftex.def)             Requested size: 155.02pt x 146.83337pt.
+ [5 </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/acc_cnn_6_res_64_0.56.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/loss_cnn_6_res_64.png>] <vaegan.png, id=57, 406.1574pt x 219.7008pt>
+File: vaegan.png Graphic file (type png)
+ <use vaegan.png>
+Package pdftex.def Info: vaegan.png used on input line 230.
+(pdftex.def)             Requested size: 230.18253pt x 124.51pt.
+ <training-data/vaegan_img.png, id=58, 258.9675pt x 252.945pt>
+File: training-data/vaegan_img.png Graphic file (type png)
+ <use training-data/vaegan_img.png>
+Package pdftex.def Info: training-data/vaegan_img.png used on input line 241.
+(pdftex.def)             Requested size: 155.02pt x 151.42079pt.
+File: training-data/vae.png Graphic file (type png)
+ <use training-data/vae.png>
+Package pdftex.def Info: training-data/vae.png used on input line 247.
+(pdftex.def)             Requested size: 155.02pt x 146.83337pt.
+ [6 </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/autoencoder_basic.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/vae.png> </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/vaegan.png>] [7 </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/vaegan_img.png>] (/Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/report.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -763,18 +792,18 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 11775 strings out of 493014
- 194763 string characters out of 6133350
- 718174 words of memory out of 5000000
- 15157 multiletter control sequences out of 15000+600000
- 9094 words of font info for 33 fonts, out of 8000000 for 9000
+ 11923 strings out of 493014
+ 197501 string characters out of 6133350
+ 718223 words of memory out of 5000000
+ 15300 multiletter control sequences out of 15000+600000
+ 9909 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,9n,39p,838b,1425s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on /Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/report.pdf (6 pages, 517880 bytes).
+ 36i,9n,45p,838b,1425s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on /Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/report.pdf (7 pages, 611853 bytes).
 PDF statistics:
- 76 PDF objects out of 1000 (max. 8388607)
- 27 compressed objects within 1 object stream
+ 97 PDF objects out of 1000 (max. 8388607)
+ 40 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 91 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
