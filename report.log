@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.27)  22 MAR 2019 11:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.27)  22 MAR 2019 11:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -615,28 +615,17 @@ Using draft setting for this image.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-
-LaTeX Warning: File `{loss_cnn_6_res_64_sep_best}.png' not found on input line 39.
-
-
-/Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/report.tex:39: Package pdftex.def Error: File `loss_cnn_6_res_64_sep_best.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.39 ...xtwidth]{{loss_cnn_6_res_64_sep_best}.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-<res3_cnn.png, id=1, 894.2208pt x 193.6836pt>
+<training-data/loss_cnn_6_res_64_best.png, id=1, 702.625pt x 451.6875pt>
+File: training-data/loss_cnn_6_res_64_best.png Graphic file (type png)
+ <use training-data/loss_cnn_6_res_64_best.png>
+Package pdftex.def Info: training-data/loss_cnn_6_res_64_best.png used on input line 39.
+(pdftex.def)             Requested size: 230.18253pt x 147.97525pt.
+ <res3_cnn.png, id=3, 894.2208pt x 193.6836pt>
 File: res3_cnn.png Graphic file (type png)
  <use res3_cnn.png>
 Package pdftex.def Info: res3_cnn.png used on input line 50.
 (pdftex.def)             Requested size: 465.06004pt x 100.7308pt.
- <training-data/acc_cnn_res_64_0.41.png, id=3, 702.625pt x 451.6875pt>
+ <training-data/acc_cnn_res_64_0.41.png, id=4, 702.625pt x 451.6875pt>
 File: training-data/acc_cnn_res_64_0.41.png Graphic file (type png)
  <use training-data/acc_cnn_res_64_0.41.png>
 Package pdftex.def Info: training-data/acc_cnn_res_64_0.41.png used on input line 60.
@@ -646,31 +635,31 @@ Underfull \hbox (badness 2213) in paragraph at lines 61--61
 []\OT1/cmr/m/n/10 (a) |ac-cu-racy plot for non-randomnized train-ing
  []
 
-<training-data/acc_cnn_res_64_0.54.png, id=4, 702.625pt x 451.6875pt>
+<training-data/acc_cnn_res_64_0.54.png, id=5, 702.625pt x 451.6875pt>
 File: training-data/acc_cnn_res_64_0.54.png Graphic file (type png)
  <use training-data/acc_cnn_res_64_0.54.png>
 Package pdftex.def Info: training-data/acc_cnn_res_64_0.54.png used on input line 66.
 (pdftex.def)             Requested size: 230.18253pt x 147.97525pt.
  [1
 
-{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/training-data/loss_cnn_6_res_64_best.png>]
 
 LaTeX Warning: Reference `cnn1' on page 2 undefined on input line 74.
 
 
 LaTeX Warning: Reference `basicarch' on page 2 undefined on input line 74.
 
-<training-data/acc_cnn_1_0.39.png, id=16, 702.625pt x 451.6875pt>
+<training-data/acc_cnn_1_0.39.png, id=18, 702.625pt x 451.6875pt>
 File: training-data/acc_cnn_1_0.39.png Graphic file (type png)
  <use training-data/acc_cnn_1_0.39.png>
 Package pdftex.def Info: training-data/acc_cnn_1_0.39.png used on input line 79.
 (pdftex.def)             Requested size: 230.18253pt x 147.97525pt.
- <training-data/loss_cnn_1.png, id=17, 702.625pt x 451.6875pt>
+ <training-data/loss_cnn_1.png, id=19, 702.625pt x 451.6875pt>
 File: training-data/loss_cnn_1.png Graphic file (type png)
  <use training-data/loss_cnn_1.png>
 Package pdftex.def Info: training-data/loss_cnn_1.png used on input line 85.
 (pdftex.def)             Requested size: 230.18253pt x 147.97525pt.
- <basic_cnn.png, id=18, 641.2758pt x 193.6836pt>
+ <basic_cnn.png, id=20, 641.2758pt x 193.6836pt>
 File: basic_cnn.png Graphic file (type png)
  <use basic_cnn.png>
 Package pdftex.def Info: basic_cnn.png used on input line 96.
@@ -679,12 +668,12 @@ Package pdftex.def Info: basic_cnn.png used on input line 96.
 
 LaTeX Warning: Reference `cnn2rand' on page 3 undefined on input line 103.
 
-<training-data/acc_cnn_2_0.37.png, id=25, 702.625pt x 451.6875pt>
+<training-data/acc_cnn_2_0.37.png, id=27, 702.625pt x 451.6875pt>
 File: training-data/acc_cnn_2_0.37.png Graphic file (type png)
  <use training-data/acc_cnn_2_0.37.png>
 Package pdftex.def Info: training-data/acc_cnn_2_0.37.png used on input line 108.
 (pdftex.def)             Requested size: 230.18253pt x 147.97525pt.
- <training-data/loss_cnn_2.png, id=26, 702.625pt x 451.6875pt>
+ <training-data/loss_cnn_2.png, id=28, 702.625pt x 451.6875pt>
 File: training-data/loss_cnn_2.png Graphic file (type png)
  <use training-data/loss_cnn_2.png>
 Package pdftex.def Info: training-data/loss_cnn_2.png used on input line 114.
@@ -696,7 +685,7 @@ LaTeX Warning: Reference `resarch' on page 3 undefined on input line 121.
 
 LaTeX Warning: Reference `cnn1res' on page 3 undefined on input line 121.
 
-<res_cnn.png, id=27, 759.7986pt x 193.6836pt>
+<res_cnn.png, id=29, 759.7986pt x 193.6836pt>
 File: res_cnn.png Graphic file (type png)
  <use res_cnn.png>
 Package pdftex.def Info: res_cnn.png used on input line 126.
@@ -706,7 +695,7 @@ File: training-data/acc_cnn_res_64_0.54.png Graphic file (type png)
  <use training-data/acc_cnn_res_64_0.54.png>
 Package pdftex.def Info: training-data/acc_cnn_res_64_0.54.png used on input line 136.
 (pdftex.def)             Requested size: 230.18253pt x 147.97525pt.
- <training-data/loss_cnn_res_64.png, id=36, 702.625pt x 451.6875pt>
+ <training-data/loss_cnn_res_64.png, id=38, 702.625pt x 451.6875pt>
 File: training-data/loss_cnn_res_64.png Graphic file (type png)
  <use training-data/loss_cnn_res_64.png>
 Package pdftex.def Info: training-data/loss_cnn_res_64.png used on input line 142.
@@ -719,12 +708,12 @@ File: training-data/acc_cnn_res_64_0.41.png Graphic file (type png)
 <use training-data/acc_cnn_res_64_0.41.png>
 Package pdftex.def Info: training-data/acc_cnn_res_64_0.41.png used on input line 154.
 (pdftex.def)             Requested size: 230.18253pt x 147.97525pt.
- <training-data/loss_cnn_res_64_2.png, id=37, 702.625pt x 451.6875pt>
+ <training-data/loss_cnn_res_64_2.png, id=39, 702.625pt x 451.6875pt>
 File: training-data/loss_cnn_res_64_2.png Graphic file (type png)
  <use training-data/loss_cnn_res_64_2.png>
 Package pdftex.def Info: training-data/loss_cnn_res_64_2.png used on input line 160.
 (pdftex.def)             Requested size: 230.18253pt x 147.97525pt.
- <res2_cnn.png, id=38, 858.0858pt x 193.6836pt>
+ <res2_cnn.png, id=40, 858.0858pt x 193.6836pt>
 File: res2_cnn.png Graphic file (type png)
  <use res2_cnn.png>
 Package pdftex.def Info: res2_cnn.png used on input line 172.
@@ -741,12 +730,12 @@ LaTeX Warning: Reference `arch6cons' on page 5 undefined on input line 186.
 
 LaTeX Warning: Reference `cnn2rescons' on page 5 undefined on input line 186.
 
-<training-data/acc_cnn_6_res_64_0.56.png, id=45, 702.625pt x 451.6875pt>
+<training-data/acc_cnn_6_res_64_0.56.png, id=47, 702.625pt x 451.6875pt>
 File: training-data/acc_cnn_6_res_64_0.56.png Graphic file (type png)
  <use training-data/acc_cnn_6_res_64_0.56.png>
 Package pdftex.def Info: training-data/acc_cnn_6_res_64_0.56.png used on input line 191.
 (pdftex.def)             Requested size: 230.18253pt x 147.97525pt.
- <training-data/loss_cnn_6_res_64.png, id=46, 702.625pt x 451.6875pt>
+ <training-data/loss_cnn_6_res_64.png, id=48, 702.625pt x 451.6875pt>
 File: training-data/loss_cnn_6_res_64.png Graphic file (type png)
  <use training-data/loss_cnn_6_res_64.png>
 Package pdftex.def Info: training-data/loss_cnn_6_res_64.png used on input line 197.
@@ -775,18 +764,18 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 11758 strings out of 493014
- 194032 string characters out of 6133350
+ 11762 strings out of 493014
+ 194211 string characters out of 6133350
  717835 words of memory out of 5000000
- 15142 multiletter control sequences out of 15000+600000
+ 15146 multiletter control sequences out of 15000+600000
  9570 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  36i,9n,39p,838b,1442s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on /Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/report.pdf (6 pages, 415800 bytes).
+Output written on /Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/report.pdf (6 pages, 434418 bytes).
 PDF statistics:
- 76 PDF objects out of 1000 (max. 8388607)
+ 78 PDF objects out of 1000 (max. 8388607)
  33 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
 

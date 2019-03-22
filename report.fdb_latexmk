@@ -1,11 +1,11 @@
 # Fdb version 3
 ["biber report"] 0 "report.bcf" "report.bbl" "report" 0
-  "report.bcf" 1553253119 92058 d56d8636b774f9287f5d3c400e2cc436 ""
+  "report.bcf" 1553253557 92058 d56d8636b774f9287f5d3c400e2cc436 ""
   (generated)
   "report.bbl"
-["pdflatex"] 1553253114 "/Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/report.tex" "/Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/report.pdf" "report" 1553253114
-  "/Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/report.aux" 1553253114 8 a94a2480d3289e625eea47cd1b285758 ""
-  "/Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/report.tex" 1553253108 9794 c8c500645ef4c3a1bba5d130e1b3c340 ""
+["pdflatex"] 1553253554 "/Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/report.tex" "/Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/report.pdf" "report" 1553253554
+  "/Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/report.aux" 1553253554 8 a94a2480d3289e625eea47cd1b285758 ""
+  "/Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/report.tex" 1553253547 9790 b6790d4c831aa4513f971f9d88e6f70a ""
   "/usr/local/texlive/2016/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -102,7 +102,7 @@
   "report.aux" 0 -1 0 ""
   "report.bbl" 0 -1 0 "biber report"
   "report.run.xml" 0 -1 0 ""
-  "report.tex" 1553253108 9794 c8c500645ef4c3a1bba5d130e1b3c340 ""
+  "report.tex" 1553253547 9790 b6790d4c831aa4513f971f9d88e6f70a ""
   "res2_cnn.png" 1553248891 51289 77d748fec7b7dd2ba519f405cf3daed8 ""
   "res3_cnn.png" 1553248865 51865 0cfd6893fbda46a495ea35d8cfee4dc9 ""
   "res_cnn.png" 1553248941 48550 44408efbbc640606fab4fd74d1ffb183 ""
@@ -114,15 +114,15 @@
   "training-data/loss_cnn_1.png" 1552080626 27685 519dc382dcbfaed34553df660bf12d94 ""
   "training-data/loss_cnn_2.png" 1553000371 31727 66a7dcb40c7aef996d3816ebceecfb8d ""
   "training-data/loss_cnn_6_res_64.png" 1553037790 28890 45ec73087b3e3522d67e7170aa397714 ""
+  "training-data/loss_cnn_6_res_64_best.png" 1553253075 28616 ba75f60a0afd5f6be323f83da64efe65 ""
   "training-data/loss_cnn_res_64.png" 1553004182 28172 84127059aede508443deac4ad6c2d1fe ""
   "training-data/loss_cnn_res_64_2.png" 1553011888 25517 7d066634650be520ba153edcb91ed3ec ""
   "{acc_cnn_6_res_64_0.59_sep}.png" 0 -1 0 ""
-  "{loss_cnn_6_res_64_sep_best}.png" 0 -1 0 ""
   (generated)
   "report.run.xml"
   "report.bcf"
   "report.aux"
-  "report.log"
+  "report.pdf"
   "/Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/report.pdf"
   "/Users/FatemaK/Desktop/year3/SSA/ml/ssa-ml/report.log"
-  "report.pdf"
+  "report.log"

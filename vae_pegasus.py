@@ -236,9 +236,9 @@ while (epoch < 100):
         pegasus.numpy().T
     )
 
-    torch.save(copy.deepcopy(N.state_dict()), 'encoder_model.pkl')
-    torch.save(copy.deepcopy(N.state_dict()), 'decoder_model.pkl')
-    torch.save(copy.deepcopy(N.state_dict()), 'discriminator_model.pkl')
+    torch.save(copy.deepcopy(N_Encoder.state_dict()), 'encoder_model.pkl')
+    torch.save(copy.deepcopy(N_Decoder.state_dict()), 'decoder_model.pkl')
+    torch.save(copy.deepcopy(N_Discriminator.state_dict()), 'discriminator_model.pkl')
 
     # plot metrics
     vis.line(X=np.array([epoch]), Y=np.array([[
